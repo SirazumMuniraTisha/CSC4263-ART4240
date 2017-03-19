@@ -8,7 +8,7 @@ public class bullscript : MonoBehaviour {
     private void Start()
     {
         r2d = GetComponent<Rigidbody2D>();
-        r2d.velocity = new Vector2(0, speed);
+        r2d.velocity = new Vector2(speed, 0);
     }
     // Update is called once per frame
     void Update()
