@@ -7,12 +7,17 @@ public class bulletShot: MonoBehaviour {
 	public float speed = 6;
 	//public GameObject enemyDeath;
 	float initPosition;
+	float initRotation;
 	void Start() {
 		initPosition = transform.position.x;
+		initRotation = transform.rotation.z;
 	}
 	void Update () {
-		
-		transform.Translate (Vector2.right * Time.deltaTime * speed);
+		Vector3 move = Vector2.right * Time.deltaTime * speed;
+		if (initRotation == 180) {
+			move = (-1) * move;
+		}
+		transform.Translate (move);
 		if (initPosition - transform.position.x > 5 || initPosition - transform.position.x < -5) {
 			Destroy (gameObject);
 		}
