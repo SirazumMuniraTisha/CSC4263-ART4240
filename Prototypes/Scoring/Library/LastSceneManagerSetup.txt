@@ -1,0 +1,4 @@
+sceneSetups:
+- path: C:/Users/yfazla1/Documents/Project1_Tisha/Assets/Scene/PinBallGameScene.unity
+  isLoaded: 1
+  isActive: 1
