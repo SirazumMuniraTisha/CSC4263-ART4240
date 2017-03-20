@@ -4,10 +4,25 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
 
-    public float speed = 10.0f;
-	void Update () {
-        float x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        float y = Input.GetAxis("Vertical") * speed * Time.deltaTime;
-        transform.Translate(0, -x, y);
+    public float speed = 1.5f;
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.position += Vector3.left * speed * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.position += Vector3.right * speed * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            transform.position += Vector3.up * speed * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.position += Vector3.down * speed * Time.deltaTime;
+        }
     }
 }
