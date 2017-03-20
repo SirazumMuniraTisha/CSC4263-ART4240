@@ -11,7 +11,7 @@ public class BacMove1 : MonoBehaviour {
 		rigidBody = gameObject.GetComponent<Rigidbody2D> ();
 		initPosition = gameObject.transform.position;
 	}
-	
+
 	void Update () {
 		currentPosition = initPosition;
 		currentPosition.y = initPosition.y + Mathf.Sin (Time.timeSinceLevelLoad)*2;
