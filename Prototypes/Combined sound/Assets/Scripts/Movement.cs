@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour {
 	Sprite CapsuleRight;
 	public Sprite CapsuleLeft;
 	public float speed = 10.0f;
+	public int health = 100;
 
 	void Start() {
 		Capsule = (SpriteRenderer)GetComponent("SpriteRenderer");
@@ -35,5 +36,16 @@ public class Movement : MonoBehaviour {
 		//	transform.position += Vector3.down * speed * Time.deltaTime;
 		//}
 
+	}
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.tag == "Enemy") {
+			print ("ouch");
+			health -= 10;
+			print (health);
+			if (health == 0) {
+				Destroy (gameObject);
+			}	
+		}
 	}
 }
