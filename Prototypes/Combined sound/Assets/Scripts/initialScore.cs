@@ -14,14 +14,14 @@ public class initialScore : MonoBehaviour
 
     void Start()
     {
-        currentScoreText = GetComponent<Text>();
-        currentImmunityText = GetComponent<Text>();
+        currentScoreText = GameObject.FindGameObjectWithTag("scoreCount").GetComponent<Text>(); ;
+        currentImmunityText = GameObject.FindGameObjectWithTag("immunity").GetComponent<Text>(); ;
         count = 0;
         immunityPercentage = 100;
 
 
         currentScoreText.text = "Score: " + count.ToString();
-        currentImmunityText.text = "Immunity Level:" + immunityPercentage.ToString() + "%";
+        currentImmunityText.text = "Immunity Level: " + immunityPercentage.ToString() + "%";
     }
 
     

@@ -48,7 +48,7 @@ public class getScoreForShoot : MonoBehaviour
         
         if(count >= 30)
         {
-            print(count);
+            //print(count);
             winText.text = "Congratulations! You Win.";
             winText.gameObject.SetActive(true);
         }
