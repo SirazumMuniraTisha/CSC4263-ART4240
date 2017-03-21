@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class bulletShot: MonoBehaviour {
 
@@ -26,7 +27,10 @@ public class bulletShot: MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.gameObject.tag == "Enemy") {
-			print ("shot");
+            Text immunityText = GameObject.FindGameObjectWithTag("immunity").GetComponent<Text>();
+            int currentImmunity = int.Parse(immunityText.text) - 5;
+            immunityText.text = currentImmunity.ToString() + "%";
+            print ("shot");
 			Destroy (other.gameObject);
 			Destroy (gameObject);
 		}
