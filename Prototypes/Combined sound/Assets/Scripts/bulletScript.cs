@@ -23,7 +23,7 @@ public class bulletScript : MonoBehaviour {
 
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Space))
+		if (Input.GetKeyDown(KeyCode.Return))
 		{
 			dt1 = DateTime.Now.Second;
 
