@@ -14,6 +14,7 @@ public class Movement : MonoBehaviour {
 	public Sprite CapsuleLeft;
 	public float speed = 10.0f;
     public Boundary boundary;
+	public int health = 100;
 
     void Start() {
 		Capsule = (SpriteRenderer)GetComponent("SpriteRenderer");
@@ -58,6 +59,17 @@ public class Movement : MonoBehaviour {
         //if (Input.GetKey (KeyCode.DownArrow)) {
         //	transform.position += Vector3.down * speed * Time.deltaTime;
         //}
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.tag == "Enemy") {
+			print ("ouch");
+			health -= 10;
+			print (health);
+			if (health == 0) {
+				Destroy (gameObject);
+			}	
+		}
+	}
 
     }
 
