@@ -23,17 +23,18 @@ public class getScoreForShoot : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Pick Up"))
+        if (other.gameObject.tag.Contains("BA") || other.gameObject.CompareTag("PS")) //shootin a microbe or parasite
         {
             other.gameObject.SetActive(false);
-            count = count + 1;
+            count = count + 10;
             SetCountText();
         }
 
-        else if (other.gameObject.CompareTag("Finish"))
+        else if (other.gameObject.CompareTag("WBC")) //shooting white blood cell by mistake
         {
-            finishText.text = "Sorry.Better Luck Next Time.";
-            rb.gameObject.SetActive(false);
+            other.gameObject.SetActive(false);
+            count = count - 5;
+            SetCountText();
         }
 
     }
@@ -43,7 +44,7 @@ public class getScoreForShoot : MonoBehaviour
         countText.text = "Score: " + count.ToString();
         if (count >= 5)
         {
-            winText.text = "Congratulations! Welcome to LSU";
+            winText.text = "Congratulations! You Win";
             rb.gameObject.SetActive(false);
         }
     }
