@@ -5,16 +5,12 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour {
 
     public GameObject player;
-    Vector3 offset;
-
-    void Start()
-    {
-        offset = transform.position - player.transform.position;
-    }
+    public float speed = 10.0f;
 
 
     void Update()
     {
-        transform.position = player.transform.position + offset;
+        float xPos = Mathf.Lerp(transform.position.x, player.transform.position.x, speed * Time.deltaTime);
+        transform.position = new Vector3(xPos, 0, -10);
     }
 }
