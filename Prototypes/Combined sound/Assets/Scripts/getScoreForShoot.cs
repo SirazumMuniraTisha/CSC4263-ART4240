@@ -46,13 +46,10 @@ public class getScoreForShoot : MonoBehaviour
     {
         scoreCount.text = "Score: " + count.ToString();
         
-        if(count >= 20)
+        if(count >= 30)
         {
             print(count);
-            //Vector2 initPosition = winText.transform.position;
-            //Vector2 currentPosition;
-            //currentPosition.y = initPosition.y - 600.0f;
-            //winText.transform.Translate(0, 0, 0);
+            winText.text = "Congratulations! You Win.";
             winText.gameObject.SetActive(true);
         }
         
