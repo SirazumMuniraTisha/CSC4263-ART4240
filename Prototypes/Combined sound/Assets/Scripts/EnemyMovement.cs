@@ -8,9 +8,9 @@ public class EnemyMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		r2d = GetComponent<Rigidbody2D>();
-		float y = r2d.velocity.y;
+		float y = r2d.velocity.x;
 		y = speed;
-		r2d.angularVelocity = Random.Range (-10, 10);
+		r2d.angularVelocity = Random.Range (-.1f, .1f);
 	}
 	
 	// Update is called once per frame
