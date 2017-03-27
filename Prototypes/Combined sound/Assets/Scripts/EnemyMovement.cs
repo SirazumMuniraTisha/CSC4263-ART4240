@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
-	public float speed = 3f;
+	public float speed = 10f;
 	//Rigidbody2D r2d;
 	private Transform target;
 

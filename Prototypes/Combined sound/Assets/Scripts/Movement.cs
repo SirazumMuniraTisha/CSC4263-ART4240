@@ -45,6 +45,10 @@ public class Movement : MonoBehaviour {
            0.0f
            
        );
+		
+		if (health == 0) {
+			Destroy (gameObject);
+		}	
     }
 
        
@@ -68,6 +72,18 @@ public class Movement : MonoBehaviour {
 			if (health == 0) {
 				Destroy (gameObject);
 			}	
+		}
+	}
+
+	/**
+	 * code to trigger power upgrade
+	 */
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.tag == "Useful") {
+			Debug.Log ("upgrade");
+			health += 5;
+			Destroy (other.gameObject);
 		}
 	}
 

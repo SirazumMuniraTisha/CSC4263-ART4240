@@ -32,11 +32,11 @@ public class getScoreForShoot : MonoBehaviour
             SetCountText();
         }
 
-        else if (other.gameObject.CompareTag("Useful")) //shooting red or white blood cells by mistake
-        {
-            other.gameObject.SetActive(false);
-            count = count - 5;
-            SetCountText();
+       else if (other.gameObject.CompareTag("Useful")) //shooting red or white blood cells by mistake
+       {
+          other.gameObject.SetActive(false);
+          count = count - 5;
+          SetCountText();
 
         }
 
@@ -46,12 +46,12 @@ public class getScoreForShoot : MonoBehaviour
     {
         scoreCount.text = "Score: " + count.ToString();
         
-        if(count >= 30)
-        {
+        //if(count >= 30)
+        //{
             //print(count);
-            winText.text = "Congratulations! You Win.";
-            winText.gameObject.SetActive(true);
-        }
+          //  winText.text = "Congratulations! You Win.";
+            //winText.gameObject.SetActive(true);
+        //}
         
     }
 
