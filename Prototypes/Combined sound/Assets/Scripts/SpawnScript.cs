@@ -7,13 +7,13 @@ using UnityEngine;
 public class SpawnScript : MonoBehaviour {
 
 	public GameObject enemy; //enemy prefab to be spawned
-	public float spawnTime = 1f; //time between spawns
+	public float spawnTime = 9f; //time between spawns
 	public Transform [] spawnPoint;
 
 	void Start()
 	{
 		//Call spzwn function every 2 seconds
-		InvokeRepeating("Spawn", spawnTime, spawnTime);
+		InvokeRepeating("Spawn", 12f, spawnTime);
 	}
 
 	void Spawn()
