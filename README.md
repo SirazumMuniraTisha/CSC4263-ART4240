@@ -1,6 +1,6 @@
 # CSC4263-ART4240
-##Team Name: TIMOJY
-###Game Name: Champi-Capi
+Team Name: TIMOJY
+Game Name: Champi-Capi
 
 Sirazum Munira Tisha (stisha1@lsu.edu)- Leader/Programmer
 Yalda Fazlalizadeh ( yfazla1@lsu.edu)  - Level Designer
