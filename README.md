@@ -1,9 +1,9 @@
 # CSC4263-ART4240
-Team Name: TIMOJY
-Game Name: Champi-Capi
+##Team Name: TIMOJY
+###Game Name: Champi-Capi
 
-Sirazum Munira Tisha - Leader/Programmer
-Yalda Fazlalizadeh  - Level Designer
-Jeremy M Gremillion - Artist
-Melva M Matthews- Programmer
-Yen-Jung Chen - Programmer
+Sirazum Munira Tisha (stisha1@lsu.edu)- Leader/Programmer
+Yalda Fazlalizadeh ( yfazla1@lsu.edu)  - Level Designer
+Jeremy M Gremillion(jgrem28@lsu.edu)- Artist
+Melva M Matthews(mmatt26@lsu.edu)- Programmer
+Yen-Jung Chen( yche118@lsu.edu) - Programmer
