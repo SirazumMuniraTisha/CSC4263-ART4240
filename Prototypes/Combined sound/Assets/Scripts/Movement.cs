@@ -15,6 +15,7 @@ public class Movement : MonoBehaviour {
 	public float speed = 10.0f;
     public Boundary boundary;
 	public int health = 100;
+    public int count;
 
     void Start() {
 		Capsule = (SpriteRenderer)GetComponent("SpriteRenderer");
@@ -80,10 +81,16 @@ public class Movement : MonoBehaviour {
 	 */
 	void OnTriggerEnter2D(Collider2D other)
 	{
+        
 		if (other.gameObject.tag == "Useful") {
 			Debug.Log ("upgrade");
-			health += 5;
-			Destroy (other.gameObject);
+            if (health < 110)
+            {
+                health += 5;
+                Destroy(other.gameObject);
+                Debug.Log(health);
+            }
+
 		}
 	}
 
