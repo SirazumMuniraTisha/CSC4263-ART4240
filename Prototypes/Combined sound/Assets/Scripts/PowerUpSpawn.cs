@@ -7,7 +7,7 @@ using UnityEngine;
 public class PowerUpSpawn: MonoBehaviour {
 
 	public GameObject power; //enemy prefab to be spawned
-	public float spawnTime = 15f; //time between spawns
+	public float spawnTime = 30f; //time between spawns
 	public Transform [] spawnPoint;
 
 	void Start()
@@ -21,4 +21,5 @@ public class PowerUpSpawn: MonoBehaviour {
 		int spawnPointIndex = Random.Range (0, spawnPoint.Length);
 		Instantiate (power, spawnPoint [spawnPointIndex].position, spawnPoint [spawnPointIndex].rotation);
 	}
+
 }
