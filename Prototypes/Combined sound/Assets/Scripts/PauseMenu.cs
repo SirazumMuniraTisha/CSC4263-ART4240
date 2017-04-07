@@ -30,6 +30,24 @@ public class PauseMenu : MonoBehaviour {
         {
             PauseUI.SetActive(false);
             Time.timeScale = 1;
-        }
+        }  
     }
+
+    public void Resume()
+    {
+        paused = false;
+    }
+    public void Restart()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+    }
+    public void Mainmenu()
+    {
+       
+    }
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
 }
