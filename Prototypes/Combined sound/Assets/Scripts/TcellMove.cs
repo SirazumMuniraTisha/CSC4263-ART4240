@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class TcellMove : MonoBehaviour {
 
-    public float speed;
-    public Rigidbody2D rb2D;
-    void Start()
+    public float speed = 3f;
+    Rigidbody2D rigidbody2d;
+
+    void Awake()
     {
-        rb2D = GetComponent<Rigidbody2D>();
+        rigidbody2d = GetComponent<Rigidbody2D>();
     }
+
     void FixedUpdate()
     {
-        rb2D.MoveRotation(rb2D.rotation + speed * Time.fixedDeltaTime);
+        rigidbody2d.velocity = new Vector2(speed * -1, 0f);
     }
 }
