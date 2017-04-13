@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TcellMove : MonoBehaviour {
 
-    public float speed = 3f;
+    public float speed;
     Rigidbody2D rigidbody2d;
 
     void Awake()
