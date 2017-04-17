@@ -11,24 +11,34 @@ public class Boundary
 public class Movement : MonoBehaviour {
 	SpriteRenderer Capsule;
 	Sprite CapsuleRight;
-	public Sprite CapsuleLeft;
+    public Sprite ShieldCapiRight;
+    public Sprite ShieldCapiLeft;
+    public Sprite CapsuleLeft;
 	public float speed = 10.0f;
     public Boundary boundary;
 	public int health = 100;
     public int count = 0;
+    private Player player;
 
     void Start() {
 		Capsule = (SpriteRenderer)GetComponent("SpriteRenderer");
 		CapsuleRight = Capsule.sprite;
-	}
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+    }
 	void Update () {
 
 		if(Input.GetKey(KeyCode.RightArrow)){
-			Capsule.sprite = CapsuleRight;
+            if (player.curhealth == 0)
+                Capsule.sprite = CapsuleRight;
+            else
+                Capsule.sprite = ShieldCapiRight;
             transform.position += Vector3.right * speed * Time.deltaTime;
         }
 		if (Input.GetKey (KeyCode.LeftArrow)) {
-			Capsule.sprite = CapsuleLeft;
+            if (player.curhealth == 0)
+                Capsule.sprite = CapsuleLeft;
+            else
+                Capsule.sprite = ShieldCapiLeft;
             transform.position += Vector3.left * speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.UpArrow))
