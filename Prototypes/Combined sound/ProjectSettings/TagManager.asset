@@ -15,6 +15,7 @@ TagManager:
   - RemainingTime
   - bullet
   - Useful
+  - Tcell
   layers:
   - Default
   - TransparentFX

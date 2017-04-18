@@ -19,4 +19,13 @@ public class Player : MonoBehaviour {
             curhealth = maxhealth;
 
     }
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Tcell")
+        {
+            curhealth += 1;
+
+            Destroy(other.gameObject);
+        }
+    }
 }
