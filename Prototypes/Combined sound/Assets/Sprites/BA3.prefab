@@ -11,6 +11,21 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1472187299566002}
   m_IsPrefabParent: 1
+--- !u!1 &1137533542561518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4624755815164516}
+  m_Layer: 0
+  m_Name: fire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1472187299566002
 GameObject:
   m_ObjectHideFlags: 0
@@ -24,6 +39,7 @@ GameObject:
   - component: {fileID: 50503056740914850}
   - component: {fileID: 61963537690467314}
   - component: {fileID: 114411608904430526}
+  - component: {fileID: 114759326515480834}
   m_Layer: 0
   m_Name: BA3
   m_TagString: Enemy
@@ -38,10 +54,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1472187299566002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.9, y: 1.77, z: 0}
+  m_LocalPosition: {x: -13.520069, y: 1.0200545, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
-  m_Children: []
+  m_Children:
+  - {fileID: 4624755815164516}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4624755815164516
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1137533542561518}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4416854219472164}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50503056740914850
@@ -107,6 +137,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &114759326515480834
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1472187299566002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a55c7b8092e7ba4699c0dee96e5d6f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 1130070630181196, guid: a754c215ebbe4104e96804cfb3590641, type: 2}
+  firePoint: {fileID: 4624755815164516}
+  BA1oclock: {fileID: 21300000, guid: 00f58225369d7374391e1d7e2fada212, type: 3}
+  BA3oclock: {fileID: 21300000, guid: b30aebb9a849b994f9cc51da611eaa92, type: 3}
+  BA5oclock: {fileID: 21300000, guid: 49c7b09e0eee0f44dae314edeabbf4da, type: 3}
+  BA7oclock: {fileID: 21300000, guid: cad839ab994003b4193fcac82415133b, type: 3}
+  BA9oclock: {fileID: 21300000, guid: 48e96900c9c369b4ea0a68cda6badffb, type: 3}
 --- !u!212 &212416173691336706
 SpriteRenderer:
   m_ObjectHideFlags: 1
