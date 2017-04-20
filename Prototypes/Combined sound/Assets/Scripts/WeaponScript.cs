@@ -19,6 +19,7 @@ public class WeaponScript : MonoBehaviour {
     {
         initPosition = transform.position.x;
         initRotation = transform.rotation.z;
+     //   gameObject.GetComponent<Rigidbody2D>().velocity = transform.forward * speed;
     }
     void Update()
     {
