@@ -7,39 +7,36 @@ public class EShot : MonoBehaviour {
     public GameObject bullet;
     public Transform firePoint;
     SpriteRenderer BA3;
-    public Sprite BA1oclock;
-    public Sprite BA3oclock;
-    public Sprite BA5oclock;
-    public Sprite BA7oclock;
-    public Sprite BA9oclock;
-
+    GameObject temp;
     Sprite init;
     float dt1;
+    public float fireRate = 1f;
+
+    private float nextFire;
+
     void Start()
     {
         BA3 = (SpriteRenderer)GetComponent("SpriteRenderer");
         init = BA3.sprite;
+        
     }
 
     void Update()
     {
-        
-            dt1 = DateTime.Now.Second;
-        /**
-                    
-                    if (BA3.sprite == BA3oclock)
-                    {
-                        
-                        Instantiate(bullet, firePoint.position, new Quaternion(0, 0, 0, 0));
-                    }
-                    
-                    if (BA3.sprite == BA9oclock)
-                    {
+        Invoke("ShootBull", 5f);
+           
+    }
 
-                        Instantiate(bullet, firePoint.position, new Quaternion(0, 0, 180, 0));
-                    }
+    void ShootBull()
+    {
+        if (Time.time > nextFire)
+        {
+            // = DateTime.Now.Second;
+            nextFire = Time.time + fireRate;
+            Instantiate(bullet, firePoint.position, firePoint.rotation);
 
-               */
-        Instantiate(bullet, firePoint.position, Quaternion.identity);
+            //GameObject instance= Instantiate(bullet);
+        }
+
     }
 }
