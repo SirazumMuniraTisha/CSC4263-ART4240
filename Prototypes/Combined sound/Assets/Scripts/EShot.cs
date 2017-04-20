@@ -33,7 +33,7 @@ public class EShot : MonoBehaviour {
         {
             // = DateTime.Now.Second;
             nextFire = Time.time + fireRate;
-            Instantiate(bullet, firePoint.position, firePoint.rotation);
+            Instantiate(bullet, firePoint.position, Quaternion.identity);
 
             //GameObject instance= Instantiate(bullet);
         }
