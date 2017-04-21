@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
 	public float speed = 10f;
-	//Rigidbody2D r2d;
-	private Transform target;
+    public float range = 5f;
+    //Rigidbody2D r2d;
+    private Transform target;
 
 
 	// Use this for initialization
@@ -18,7 +19,11 @@ public class EnemyMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = Vector2.MoveTowards (transform.position, target.transform.position, speed * Time.deltaTime);
+        float distance = Vector2.Distance(transform.position, target.position);
+        if (distance <= range)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+        }
 	}
 
 	void OnCollisionEnter2D(Collision2D other)

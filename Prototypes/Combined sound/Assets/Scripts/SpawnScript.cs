@@ -8,17 +8,24 @@ public class SpawnScript : MonoBehaviour {
 
 	public GameObject enemy; //enemy prefab to be spawned
 	public float spawnTime = 9f; //time between spawns
-	public Transform [] spawnPoint;
+    public float spawnRate = 9f; //time between spawns
+    public Transform [] spawnPoint;
+    private float timer;
 
 	void Start()
 	{
 		//Call spzwn function every 2 seconds
-		InvokeRepeating("Spawn", 15f, spawnTime);
+		InvokeRepeating("Spawn", 5f, spawnTime);
+        timer = Time.time + 3;
 	}
 
 	void Spawn()
 	{
-		int spawnPointIndex = Random.Range (0, spawnPoint.Length);
-		Instantiate (enemy, spawnPoint [spawnPointIndex].position, spawnPoint [spawnPointIndex].rotation);
+        if (timer < Time.time)
+        {
+            int spawnPointIndex = Random.Range(0, spawnPoint.Length);
+            Instantiate(enemy, spawnPoint[spawnPointIndex].position, spawnPoint[spawnPointIndex].rotation);
+            timer = Time.time + 3;
+        }
 	}
 }

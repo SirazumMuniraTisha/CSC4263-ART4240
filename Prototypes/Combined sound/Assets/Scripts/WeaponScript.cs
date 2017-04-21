@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponScript : MonoBehaviour {
 
-    public Transform enemyBullet;
+    public GameObject enemyBullet;
     //public float shootRate = 0.25f;
     //private float shootCoolDown;
 
@@ -24,6 +24,7 @@ public class WeaponScript : MonoBehaviour {
     void Update()
     {
         Vector3 move = Vector2.right * Time.deltaTime * speed;
+        gameObject.GetComponent<Rigidbody2D>().velocity = transform.forward * speed;
         if (initRotation == 180)
         {
             move = (-1) * move;

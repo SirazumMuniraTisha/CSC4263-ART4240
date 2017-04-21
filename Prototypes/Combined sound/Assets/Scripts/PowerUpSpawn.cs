@@ -7,19 +7,25 @@ using UnityEngine;
 public class PowerUpSpawn: MonoBehaviour {
 
 	public GameObject power; //enemy prefab to be spawned
-	public float spawnTime = 30f; //time between spawns
+	private float spawnTime = 20f; //time between spawns
 	public Transform [] spawnPoint;
+    private float timer;
 
-	void Start()
+    void Start()
 	{
 		//Call spzwn function every 15 seconds
-		InvokeRepeating("Spawn", 15f, spawnTime);
-	}
+		InvokeRepeating("Spawn", 3f, spawnTime);
+        timer = Time.time + 5;
+    }
 
-	void Spawn()
-	{
-		int spawnPointIndex = Random.Range (0, spawnPoint.Length);
-		Instantiate (power, spawnPoint [spawnPointIndex].position, spawnPoint [spawnPointIndex].rotation);
-	}
+	void Spawn() {
+
+        if (timer < Time.time)
+        {
+            int spawnPointIndex = Random.Range(0, spawnPoint.Length);
+            Instantiate(power, spawnPoint[spawnPointIndex].position, spawnPoint[spawnPointIndex].rotation);
+            timer = Time.time + 5;
+        }
+        }
 
 }
