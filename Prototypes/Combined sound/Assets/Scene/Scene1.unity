@@ -3196,7 +3196,7 @@ MonoBehaviour:
   boundary:
     xMin: -5
     xMax: 100
-    yMin: -6
+    yMin: -5
     yMax: 5
   health: 100
   count: 0
