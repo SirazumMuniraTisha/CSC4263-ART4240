@@ -43,7 +43,7 @@ public class PauseMenu : MonoBehaviour {
     }
     public void Mainmenu()
     {
-       
+        Application.LoadLevel(0);
     }
     public void Quit()
     {
