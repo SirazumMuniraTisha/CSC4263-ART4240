@@ -1,0 +1,31 @@
+Enemy can function one of two ways:
+
+1. Simply make the pieces join end to end to form a wall. Wall would be destroyable by hitting the end of it that has the eye open,
+rest of the wall would block shots. Allows us to get a little creative with level design and thinking about how the players would be 
+able to destroy the wall.
+
+2. We give it the ability to automatically grow itself the longer it is onscreen. The current frames of animation would allow the enemy
+to randomly select the direction to expand in (probably something like a 50% chance of continuing forward and a 25% chance of picking 
+either direction)and the animation would play that grows it in the respective direction. Animation timing would be something like this:
+>start off with Wall B
+>(wall B picks a direction after a few moments) Wall B changes to Wall 1 of whichever direction it decides to go, maybe it blinks 
+twice before expanding to signal the player.
+>Frames for wall 2-4 play out normally.
+>when Wall 5 starts, it spawns a new Frame B to continue the wall.
+>Once that Wall B has picked a direction and started up its animation, the previous animation follows, so a successful run would look like:
+  
+  Wall B
+  Wall L1
+  Wall L2
+  Wall L3
+  Wall L4
+  Wall L5, New Wall B Created
+  [brief pause while new wall B decides path]
+  Wall L5, Wall F1
+  Wall L6, Wall F2
+  Wall L7, Wall F3
+  FINISHED, Wall F4
+  etc.
+  
+Not sure how hard it would be to program this sort of growth mechanic into the enemy, but its there if someone wants to give it a shot. '
+Otherwise, we can just stick to option 1 and leave it as a basic destructable wall.
