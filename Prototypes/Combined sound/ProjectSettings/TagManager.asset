@@ -16,7 +16,6 @@ TagManager:
   - bullet
   - Useful
   - Tcell
-  - boundary
   layers:
   - Default
   - TransparentFX

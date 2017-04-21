@@ -16,13 +16,4 @@ public class TcellMove : MonoBehaviour {
     {
         rigidbody2d.velocity = new Vector2(speed * -1, 0f);
     }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("boundary"))
-        {
-            rigidbody2d.gameObject.SetActive(false);
-        }
-
-    }
 }
