@@ -4,14 +4,24 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class MouseSound : MonoBehaviour {
-	public AudioClip Sound;
-	public AudioSource Source;
+	public AudioSource MouseEnter;
+	public AudioSource MouseDown;
+
+	//public AudioClip Sound;
 	void Start()
 	{
-		Source = GetComponent<AudioSource>();
+		GetComponent<AudioSource>();
+	}
+	void Update()
+	{
+		
 	}
 	void OnMouseEnter(){
-		Debug.Log ("Play_Audio");
-		Source.PlayOneShot (Sound);
+		MouseEnter.Play();
 	}
+	void OnMouseDown(){
+		MouseDown.Play();
+	}
+
+
 }
