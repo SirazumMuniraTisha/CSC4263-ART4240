@@ -11,9 +11,14 @@ public class bulletScript : MonoBehaviour {
 	SpriteRenderer Capsule;
 	public Sprite CapsuleLeft;
 	public Sprite CapsuleRight;
-	public Sprite CapsuleShotL;
+    public Sprite ShieldCapsuleLeft;
+    public Sprite ShieldCapsuleRight;
+    public Sprite ShieldShootiCapsuleLeft;
+    public Sprite ShieldShootiCapsuleRight;
+    public Sprite CapsuleShotL;
 	public Sprite CapsuleShotR;
-	Sprite init;
+    private Player player;
+    Sprite init;
 	float dt1;
 	void Start()
 	{
@@ -35,17 +40,41 @@ public class bulletScript : MonoBehaviour {
 				Capsule.sprite = CapsuleShotR;
 				Instantiate(bullet, firePoint.position, new Quaternion(0,0,0,0));
 			}
-			//Capsule.sprite = CapsuleShot;
-			GetComponent<AudioSource> ().Play ();
+            if (Capsule.sprite ==ShieldCapsuleLeft )
+            {
+                Capsule.sprite = ShieldShootiCapsuleLeft;
+                Instantiate(bullet, firePointL.position, new Quaternion(0, 0, 180, 0));
+            }
+            if (Capsule.sprite == ShieldCapsuleRight )
+            {
+                Capsule.sprite = ShieldShootiCapsuleRight;
+                Instantiate(bullet, firePoint.position, new Quaternion(0, 0, 0, 0));
+            }
+            //Capsule.sprite = CapsuleShot;
+            GetComponent<AudioSource> ().Play ();
 
 		}
 		if (DateTime.Now.Second - dt1 > 0.1f) {
-			if (Capsule.sprite == CapsuleShotL) {
-				Capsule.sprite = CapsuleLeft;
-			}
-			if (Capsule.sprite == CapsuleShotR) {
-				Capsule.sprite = CapsuleRight;
-			}
+            if (player.curhealth == 0) {
+                if (Capsule.sprite == CapsuleShotL) {
+                    Capsule.sprite = CapsuleLeft;
+                }
+                if (Capsule.sprite == CapsuleShotR) {
+                    Capsule.sprite = CapsuleRight;
+                }
+            }
+            else
+            {
+                if (Capsule.sprite == ShieldShootiCapsuleLeft)
+                {
+                    Capsule.sprite = ShieldCapsuleLeft;
+                }
+                if (Capsule.sprite == ShieldShootiCapsuleRight)
+                {
+                    Capsule.sprite = ShieldCapsuleRight;
+                }
+
+            }
 			//Capsule.sprite = init;
 		}
 
