@@ -226,7 +226,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4513284216220508, guid: d77848c889fad6b42901193a91a15dd3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 138.8
+      value: 145.2
       objectReference: {fileID: 0}
     - target: {fileID: 4513284216220508, guid: d77848c889fad6b42901193a91a15dd3, type: 2}
       propertyPath: m_LocalPosition.y
@@ -259,6 +259,10 @@ Prefab:
     - target: {fileID: 1016866128912114, guid: d77848c889fad6b42901193a91a15dd3, type: 2}
       propertyPath: m_Name
       value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513284216220508, guid: d77848c889fad6b42901193a91a15dd3, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 3.659813
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d77848c889fad6b42901193a91a15dd3, type: 2}
@@ -3095,8 +3099,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1182547683}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 128, y: -3.4, z: 9}
-  m_LocalScale: {x: 17.714844, y: 18.941826, z: 1.5684255}
+  m_LocalPosition: {x: 131.2, y: -3.4, z: 9}
+  m_LocalScale: {x: 19.473022, y: 18.941826, z: 1.5684255}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -3783,7 +3787,7 @@ MonoBehaviour:
   speed: 10
   boundary:
     xMin: -5
-    xMax: 105
+    xMax: 115
     yMin: -6
     yMax: 5
   health: 100
