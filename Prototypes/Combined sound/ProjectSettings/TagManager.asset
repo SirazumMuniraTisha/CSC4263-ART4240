@@ -18,6 +18,7 @@ TagManager:
   - Tcell
   - boundary
   - ShowScore
+  - Boss
   layers:
   - Default
   - TransparentFX
