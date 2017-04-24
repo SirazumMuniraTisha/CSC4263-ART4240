@@ -5,10 +5,10 @@ using UnityEngine;
 public class RedCellMove : MonoBehaviour {
 
     float amplitudeX = 10.0f;
-    float amplitudeY = 10.0f;
+    float amplitudeY = 6.0f;
     float omegaX = 1.0f;
     float omegaY = 5.0f;
-    float index;
+    public float index;
     public float speed;
     Rigidbody2D rigidbody2d;
 
@@ -25,7 +25,7 @@ public class RedCellMove : MonoBehaviour {
     {
         index+=Time.deltaTime;
         float x = -amplitudeX * index;
-        float y = Mathf.Abs(amplitudeY * Mathf.Sin(omegaY + index));
+        float y = (amplitudeY * Mathf.Sin(omegaY + index));
         rigidbody2d.transform.position = new Vector2(x, y);
     }
     void OnTriggerEnter2D(Collider2D other)
