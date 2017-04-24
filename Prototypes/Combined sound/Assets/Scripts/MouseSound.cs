@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class MouseSound : MonoBehaviour {
 	public AudioSource MouseEnter;
 	public AudioSource MouseDown;
-
 	//public AudioClip Sound;
 	void Start()
 	{
@@ -14,7 +13,6 @@ public class MouseSound : MonoBehaviour {
 	}
 	void Update()
 	{
-		
 	}
 	void OnMouseEnter(){
 		MouseEnter.Play();

@@ -5,24 +5,28 @@ using UnityEngine.UI;
 
 public class initialScore : MonoBehaviour
 {
-
-    Rigidbody2D rb;
     private int count;
+	GameObject player;
     private int immunityPercentage;
     public Text currentScoreText;
     public Text currentImmunityText;
-
     void Start()
     {
-        currentScoreText = GameObject.FindGameObjectWithTag("scoreCount").GetComponent<Text>(); ;
-        currentImmunityText = GameObject.FindGameObjectWithTag("immunity").GetComponent<Text>(); ;
+		
+        currentScoreText = GameObject.FindGameObjectWithTag("scoreCount").GetComponent<Text>(); 
+        currentImmunityText = GameObject.FindGameObjectWithTag("immunity").GetComponent<Text>(); 
         count = 0;
         immunityPercentage = 100;
-
-
-        currentScoreText.text = "Score: " + count.ToString();
+		currentScoreText.text = count.ToString();
         currentImmunityText.text = "Immunity Level: " + immunityPercentage.ToString() + "%";
-    }
 
+    }
+	void Update(){
+		PlayerPrefs.SetString ("s", currentScoreText.text);
+		player = GameObject.FindGameObjectWithTag ("Player");
+		if (player==null)
+			Application.LoadLevel ("GameOver");
+
+	}
     
 }

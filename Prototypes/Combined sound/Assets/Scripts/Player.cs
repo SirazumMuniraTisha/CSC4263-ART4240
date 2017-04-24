@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-
-    public int curhealth;
+	public Player(){}
+    public int curhealth = 0;
     public int maxhealth = 5;
+	public AudioSource Swallow;
     void Start()
     {
         curhealth = 0;
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour {
     {
         if (curhealth >= maxhealth)
             curhealth = maxhealth;
+		
 
     }
     void OnCollisionEnter2D(Collision2D other)
@@ -24,7 +26,7 @@ public class Player : MonoBehaviour {
         if (other.gameObject.tag == "Tcell")
         {
             curhealth += 1;
-
+			Swallow.Play ();
             Destroy(other.gameObject);
         }
     }

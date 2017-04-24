@@ -17,7 +17,7 @@ public class bulletScript : MonoBehaviour {
     public Sprite ShieldShootiCapsuleRight;
     public Sprite CapsuleShotL;
 	public Sprite CapsuleShotR;
-    private Player player;
+    public Player player;
     Sprite init;
 	float dt1;
 	void Start()

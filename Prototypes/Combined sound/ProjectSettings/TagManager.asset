@@ -17,6 +17,7 @@ TagManager:
   - Useful
   - Tcell
   - boundary
+  - ShowScore
   layers:
   - Default
   - TransparentFX

@@ -11,15 +11,12 @@ public class Boundary
 public class Movement : MonoBehaviour {
 	SpriteRenderer Capsule;
 	Sprite CapsuleRight;
-    public Sprite ShieldCapiRight;
-    public Sprite ShieldCapiLeft;
-    public Sprite CapsuleLeft;
+	public Sprite ShieldCapiRight, ShieldCapiLeft, CapsuleLeft;
 	public float speed = 10.0f;
     public Boundary boundary;
-	public int health = 100;
-    public int count = 0;
+	public int health = 100, count = 0;
     private Player player;
-
+	public AudioSource Ouch;
     void Start() {
 		Capsule = (SpriteRenderer)GetComponent("SpriteRenderer");
 		CapsuleRight = Capsule.sprite;
@@ -30,15 +27,17 @@ public class Movement : MonoBehaviour {
 		if(Input.GetKey(KeyCode.RightArrow)){
             if (player.curhealth == 0)
                 Capsule.sprite = CapsuleRight;
-            else
+			else
                 Capsule.sprite = ShieldCapiRight;
+
             transform.position += Vector3.right * speed * Time.deltaTime;
         }
 		if (Input.GetKey (KeyCode.LeftArrow)) {
-            if (player.curhealth == 0)
-                Capsule.sprite = CapsuleLeft;
-            else
-                Capsule.sprite = ShieldCapiLeft;
+			if (player.curhealth == 0)
+				Capsule.sprite = CapsuleLeft;
+			else 
+				Capsule.sprite = ShieldCapiLeft;
+			
             transform.position += Vector3.left * speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.UpArrow))
@@ -78,6 +77,7 @@ public class Movement : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "Enemy") {
 			print ("ouch");
+			Ouch.Play ();
 			health -= 10;
 			print (health);
 			if (health == 0) {

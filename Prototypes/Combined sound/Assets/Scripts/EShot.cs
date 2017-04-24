@@ -19,7 +19,8 @@ public class EShot : MonoBehaviour {
     void Start()
     {
         BA3 = (SpriteRenderer)GetComponent("SpriteRenderer");
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+		if(GameObject.FindGameObjectWithTag ("Player")!=null)
+        	target = GameObject.FindGameObjectWithTag("Player").transform;
         init = BA3.sprite;
         
     }
@@ -33,19 +34,18 @@ public class EShot : MonoBehaviour {
 
     void ShootBull()
     {
-        float distance = Vector2.Distance(transform.position, target.position);
-        if (distance <= range)
-            if (Time.time > nextFire)
-        {
-                if (distance <= range)
-                {
-                    // = DateTime.Now.Second;
-                    nextFire = Time.time + fireRate;
-                    Instantiate(bullet, firePoint.position, Quaternion.identity);
-                }
+		if (target != null) {
+			float distance = Vector2.Distance (transform.position, target.position);
+			if (distance <= range)
+			if (Time.time > nextFire) {
+				if (distance <= range) {
+					// = DateTime.Now.Second;
+					nextFire = Time.time + fireRate;
+					Instantiate (bullet, firePoint.position, Quaternion.identity);
+				}
 
-            //GameObject instance= Instantiate(bullet);
-        }
-
+				//GameObject instance= Instantiate(bullet);
+			}
+		}
     }
 }

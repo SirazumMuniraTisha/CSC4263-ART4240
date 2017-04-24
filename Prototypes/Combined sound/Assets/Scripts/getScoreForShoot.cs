@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class getScoreForShoot : MonoBehaviour
 {
-    Rigidbody2D rb;
     public Text scoreCount;
     public Text winText;
     public Text finishText;
@@ -13,7 +12,6 @@ public class getScoreForShoot : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         scoreCount = GameObject.FindGameObjectWithTag("scoreCount").GetComponent<Text>();
         winText = GameObject.FindGameObjectWithTag("winText").GetComponent<Text>();
         finishText = GameObject.FindGameObjectWithTag("finishText").GetComponent<Text>();
@@ -30,6 +28,7 @@ public class getScoreForShoot : MonoBehaviour
             other.gameObject.SetActive(false);
             count = count + 10;
             SetCountText();
+
         }
 
        else if (other.gameObject.CompareTag("Useful")) //shooting red or white blood cells by mistake
@@ -41,10 +40,12 @@ public class getScoreForShoot : MonoBehaviour
         }
 
     }
+	void Update(){
 
+	}
     void SetCountText()
     {
-        scoreCount.text = "Score: " + count.ToString();
+        scoreCount.text = count.ToString();
         
         //if(count >= 30)
         //{
