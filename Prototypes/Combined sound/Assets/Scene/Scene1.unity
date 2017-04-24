@@ -3328,10 +3328,12 @@ MonoBehaviour:
   firePointL: {fileID: 373485053}
   CapsuleLeft: {fileID: 21300000, guid: 798270588214cfd4995982dbd681edb9, type: 3}
   CapsuleRight: {fileID: 21300000, guid: 2626a35540b406a4680bc4845f83f613, type: 3}
-  ShieldCapsuleLeft: {fileID: 0}
-  ShieldCapsuleRight: {fileID: 0}
-  ShieldShootiCapsuleLeft: {fileID: 0}
-  ShieldShootiCapsuleRight: {fileID: 0}
+  ShieldCapsuleLeft: {fileID: 21300000, guid: 81077791b1cc55c40949eb829903f29b, type: 3}
+  ShieldCapsuleRight: {fileID: 21300000, guid: e2c4e5eb7fc686f40a1d28dbb841f6d4, type: 3}
+  ShieldShootiCapsuleLeft: {fileID: 21300000, guid: 2299a09ed250ea0479ca1a9837677ec1,
+    type: 3}
+  ShieldShootiCapsuleRight: {fileID: 21300000, guid: 6874bc7af53eeb942a0688349eaf25e2,
+    type: 3}
   CapsuleShotL: {fileID: 21300000, guid: a54a62f3ae564e04f8e461646fcbd77a, type: 3}
   CapsuleShotR: {fileID: 21300000, guid: 67746c5e9ef679f4eb8b8503558b9b0a, type: 3}
 --- !u!82 &1409710959
