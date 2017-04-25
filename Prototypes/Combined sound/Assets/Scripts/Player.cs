@@ -11,14 +11,12 @@ public class Player : MonoBehaviour {
     void Start()
     {
         curhealth = 0;
-
     }
 
     void Update()
     {
         if (curhealth >= maxhealth)
             curhealth = maxhealth;
-		
 
     }
     void OnCollisionEnter2D(Collision2D other)

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
-	public float speed = 50f;
-    public float range = 15f;
+	public float speed = 10f;
+    public float range = 5f;
     //Rigidbody2D r2d;
     private Transform target;
 

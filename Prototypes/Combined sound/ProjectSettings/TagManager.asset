@@ -19,8 +19,6 @@ TagManager:
   - boundary
   - ShowScore
   - Boss
-  - EnemyBull
-  - BBossBull
   layers:
   - Default
   - TransparentFX

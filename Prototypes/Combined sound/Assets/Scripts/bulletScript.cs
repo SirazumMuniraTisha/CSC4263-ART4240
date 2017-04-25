@@ -18,12 +18,10 @@ public class bulletScript : MonoBehaviour {
     public Sprite CapsuleShotL;
 	public Sprite CapsuleShotR;
     public Player player;
-    Sprite init;
 	float dt1;
 	void Start()
 	{
 		Capsule = (SpriteRenderer)GetComponent("SpriteRenderer");
-		init = Capsule.sprite;
 	}
 
 	void Update()
@@ -73,12 +71,8 @@ public class bulletScript : MonoBehaviour {
                 {
                     Capsule.sprite = ShieldCapsuleRight;
                 }
-
             }
-			//Capsule.sprite = init;
 		}
 
 	}
-
-
 }

@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class Immunity : MonoBehaviour
-{
+public class Immunity : MonoBehaviour {
 
 
     public Sprite[] HeartSprites;
@@ -13,8 +12,6 @@ public class Immunity : MonoBehaviour
     public Image HeartUI;
 
     private Player player;
-
-
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
@@ -24,6 +21,4 @@ public class Immunity : MonoBehaviour
     {
         HeartUI.sprite = HeartSprites[player.curhealth];
     }
-    
 }
-

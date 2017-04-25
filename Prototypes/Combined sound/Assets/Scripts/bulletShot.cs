@@ -21,7 +21,7 @@ public class bulletShot: MonoBehaviour {
 			move = (-1) * move;
 		}
 		transform.Translate (move);
-		if (initPosition - transform.position.x > 10 || initPosition - transform.position.x < -10) {
+		if (initPosition - transform.position.x >15 || initPosition - transform.position.x < -15) {
 			Destroy (gameObject);
 		}
         consultText = GameObject.FindGameObjectWithTag("consult").GetComponent<Text>();
