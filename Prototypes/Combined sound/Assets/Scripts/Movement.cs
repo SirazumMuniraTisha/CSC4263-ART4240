@@ -77,7 +77,7 @@ public class Movement : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "Enemy") {
 			print ("ouch");
-			health -= 10;
+			health -= 5;
 			if(health > 0)
 				Ouch.Play ();
 			else
@@ -87,7 +87,31 @@ public class Movement : MonoBehaviour {
 			//	Destroy (gameObject);
 			//}	
 		}
-	}
+        else if (other.gameObject.tag == "BBossBull")
+        {
+            print("ouch");
+            health -= 15;
+            if (health > 0)
+                Ouch.Play();
+            else
+                Dead.Play();
+            print(health);
+
+        }
+        else if (other.gameObject.tag == "eb")
+        {
+            print("ouch");
+            health -= 10;
+            if (health > 0)
+                Ouch.Play();
+            else
+                Dead.Play();
+            print(health);
+            //if (health == 0) {
+            //	Destroy (gameObject);
+            //}	
+        }
+    }
 
 	/**
 	 * code to trigger power upgrade

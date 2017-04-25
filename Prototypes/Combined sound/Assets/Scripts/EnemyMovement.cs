@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
 	public float speed = 10f;
-    public float range = 15f;
+    public float range = 25f;
     //Rigidbody2D r2d;
     private Transform target;
 

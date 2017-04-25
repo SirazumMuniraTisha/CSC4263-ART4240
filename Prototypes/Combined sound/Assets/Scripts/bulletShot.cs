@@ -24,8 +24,8 @@ public class bulletShot: MonoBehaviour {
 		if (initPosition - transform.position.x >15 || initPosition - transform.position.x < -15) {
 			Destroy (gameObject);
 		}
-        consultText = GameObject.FindGameObjectWithTag("consult").GetComponent<Text>();
-        consultText.text = "";
+        //consultText = GameObject.FindGameObjectWithTag("consult").GetComponent<Text>();
+       // consultText.text = "";
     }
 
 	void OnCollisionEnter2D(Collision2D other)
