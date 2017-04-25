@@ -43,6 +43,7 @@ public class bulletShot: MonoBehaviour {
 		} else if (other.gameObject.tag == "clog")
         {
             Destroy(other.gameObject);
+            Destroy(gameObject);
         }
 	}
 
