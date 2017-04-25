@@ -7,6 +7,7 @@ public class BossMovement : MonoBehaviour {
     Rigidbody2D rigidBody;
     Vector2 currentPosition;
     Vector2 initialPosition;
+    int count = 0;
 
     void Start()
     {
@@ -27,6 +28,8 @@ public class BossMovement : MonoBehaviour {
     {
         if (other.gameObject.tag == "bullet")
         {
+            count += 1;
+            if(count ==5)
             Destroy(gameObject);
         }
     }
