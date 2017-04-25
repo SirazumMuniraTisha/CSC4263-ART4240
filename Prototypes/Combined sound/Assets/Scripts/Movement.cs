@@ -14,9 +14,10 @@ public class Movement : MonoBehaviour {
 	public Sprite ShieldCapiRight, ShieldCapiLeft, CapsuleLeft;
 	public float speed = 10.0f;
     public Boundary boundary;
-	//public int health = 100, count = 0;
+	public int health = 100, count = 0;
     private Player player;
-	//public AudioSource Ouch;
+	public AudioSource Ouch;
+    
     void Start() {
 		Capsule = (SpriteRenderer)GetComponent("SpriteRenderer");
 		CapsuleRight = Capsule.sprite;
@@ -55,10 +56,10 @@ public class Movement : MonoBehaviour {
            0.0f
            
        );
-		/**
+		
 		if (health == 0) {
 			Destroy (gameObject);
-		}	**/
+		}	
     }
 
        
@@ -73,7 +74,7 @@ public class Movement : MonoBehaviour {
         //if (Input.GetKey (KeyCode.DownArrow)) {
         //	transform.position += Vector3.down * speed * Time.deltaTime;
         //}
-	/**void OnCollisionEnter2D(Collision2D other)
+	void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.gameObject.tag == "Enemy") {
 			print ("ouch");
@@ -89,7 +90,7 @@ public class Movement : MonoBehaviour {
 	/**
 	 * code to trigger power upgrade
 	 */
-	/* void OnTriggerEnter2D(Collider2D other)
+	 void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.tag == "Useful" && health < 105) {
             Debug.Log(health);
@@ -99,7 +100,7 @@ public class Movement : MonoBehaviour {
             Debug.Log(health);
         }
 	} 
-    **/
+    
 
     }
 

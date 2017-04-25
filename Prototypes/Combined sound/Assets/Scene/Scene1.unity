@@ -3845,6 +3845,7 @@ GameObject:
   - component: {fileID: 1409710958}
   - component: {fileID: 1409710959}
   - component: {fileID: 1409710960}
+  - component: {fileID: 1409710961}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Player
@@ -3872,6 +3873,9 @@ MonoBehaviour:
     xMax: 115
     yMin: -6
     yMax: 5
+  health: 100
+  count: 0
+  Ouch: {fileID: 0}
 --- !u!60 &1409710954
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4091,6 +4095,19 @@ MonoBehaviour:
   curhealth: 1
   maxhealth: 5
   Swallow: {fileID: 1653109279}
+--- !u!114 &1409710961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1409710952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98ea5389ee7fe63459023ae12d677e55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HeartSprites: []
+  HeartUI: {fileID: 0}
 --- !u!1001 &1435332321
 Prefab:
   m_ObjectHideFlags: 0
@@ -5835,7 +5852,6 @@ MonoBehaviour:
   - {fileID: 21300002, guid: dde7cd35ea0126c498b2a1b42e864ec9, type: 3}
   - {fileID: 21300000, guid: dde7cd35ea0126c498b2a1b42e864ec9, type: 3}
   HeartUI: {fileID: 1696304553}
-  Ouch: {fileID: 0}
 --- !u!1 &1930088464
 GameObject:
   m_ObjectHideFlags: 0
