@@ -22,4 +22,12 @@ public class BossMovement : MonoBehaviour {
         currentPosition.y = initialPosition.y + Mathf.Sin( Time.timeSinceLevelLoad);
         rigidBody.MovePosition(currentPosition);
     }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "bullet")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
