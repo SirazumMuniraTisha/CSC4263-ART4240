@@ -11,7 +11,7 @@ public class EShot : MonoBehaviour {
     Sprite init;
     float dt1;
     public float fireRate = 1f;
-    public float range = 5f;
+    public float range = 10f;
     private Transform target;
 
     private float nextFire;
