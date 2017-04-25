@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BossMovement : MonoBehaviour {
-
+    SpriteRenderer Boss;
+    Sprite StillBoss;
+    public Sprite MovingBoss;
     Rigidbody2D rigidBody;
     Vector2 currentPosition;
     Vector2 initialPosition;
@@ -11,6 +13,8 @@ public class BossMovement : MonoBehaviour {
 
     void Start()
     {
+        Boss = (SpriteRenderer)GetComponent("SpriteRenderer");
+        StillBoss= Boss.sprite;
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
         initialPosition = gameObject.transform.position;
     }
@@ -19,7 +23,11 @@ public class BossMovement : MonoBehaviour {
     void Update()
     {
         currentPosition = initialPosition;
-        currentPosition.x = initialPosition.x + Mathf.Sin(2*Time.timeSinceLevelLoad);
+        currentPosition.x = initialPosition.x + Mathf.Sin(Time.timeSinceLevelLoad);
+        if (currentPosition.x < initialPosition.x)
+            Boss.sprite = MovingBoss;
+        else
+            Boss.sprite = StillBoss;
         currentPosition.y = initialPosition.y + Mathf.Sin( Time.timeSinceLevelLoad);
         rigidBody.MovePosition(currentPosition);
     }
