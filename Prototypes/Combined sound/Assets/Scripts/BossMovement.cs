@@ -43,7 +43,7 @@ public class BossMovement : MonoBehaviour {
         if (other.gameObject.tag == "bullet")
         {
             count += 1;
-            if(count ==5)
+            if(count ==10)
             Destroy(gameObject);
         }
     }
