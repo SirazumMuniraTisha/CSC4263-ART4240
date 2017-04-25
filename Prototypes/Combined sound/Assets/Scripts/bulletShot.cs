@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class bulletShot: MonoBehaviour {
 
-	public float speed = 6;
+	public float speed = 20;
 	//public GameObject enemyDeath;
 	float initPosition;
 	float initRotation;

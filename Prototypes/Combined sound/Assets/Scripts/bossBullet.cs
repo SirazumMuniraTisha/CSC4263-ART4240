@@ -22,7 +22,7 @@ public class bossBullet : MonoBehaviour {
     void Update()
     {
         Vector3 move = Vector2.right * Time.deltaTime * speed;
-        gameObject.GetComponent<Rigidbody2D>().velocity = transform.forward * speed;
+        //gameObject.GetComponent<Rigidbody2D>().velocity = transform.forward * speed;
         if (initRotation == 180)
         {
             move = (-1) * move;

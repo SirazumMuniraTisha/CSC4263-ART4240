@@ -15,7 +15,7 @@ public class bossWeapon : MonoBehaviour
     GameObject temp;
     Sprite init;
     float dt1;
-    public float fireRate = 10f;
+    private float fireRate = 10f;
     private float range = 50f;
     private Transform target;
 
@@ -28,8 +28,7 @@ public class bossWeapon : MonoBehaviour
         
         if (GameObject.FindGameObjectWithTag("Player") != null)
             target = GameObject.FindGameObjectWithTag("Player").transform;
-        nextFire = Time.time + fireRate;
-
+      
 
 
     }
@@ -37,7 +36,7 @@ public class bossWeapon : MonoBehaviour
     void Update()
     {
 
-        Invoke("ShootBull", 1f);
+        Invoke("ShootBull", 0f);
 
     }
 
@@ -45,12 +44,11 @@ public class bossWeapon : MonoBehaviour
     {
         if (target != null)
         {
-            boss = GameObject.FindGameObjectWithTag("Boss").transform;
+            //boss = GameObject.FindGameObjectWithTag("Boss").transform;
             float distance = Vector2.Distance(transform.position, target.position);
-            if (distance <= range)
-                if (Time.time > nextFire)
+            if (Time.time > nextFire)
                 {
-                    nextFire = Time.time + fireRate;
+                    //nextFire = Time.time + fireRate;
 
                     if (distance <= range)
                     {
