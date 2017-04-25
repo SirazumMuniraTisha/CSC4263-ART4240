@@ -1185,7 +1185,42 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 269871158}
   m_Enabled: 1
-
+<<<<<<< HEAD
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f43eefb93c116f4c86bbc6d9416fe0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 1336815130626734, guid: 761e4fb1a66cdcc4cbc362ad0f040992, type: 2}
+  firePoint:
+  - {fileID: 425260493}
+  - {fileID: 234833210}
+--- !u!1 &277751981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 277751984}
+  - component: {fileID: 277751983}
+  - component: {fileID: 277751982}
+  - component: {fileID: 277751985}
+  m_Layer: 0
+  m_Name: clogBlock2 (6)
+  m_TagString: clog
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!60 &277751982
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 277751981}
+  m_Enabled: 1
+=======
+>>>>>>> 33c43b4eb29d33a3c8a1e43d145472463bdd999b
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1729,6 +1764,75 @@ Transform:
   - {fileID: 1559482732}
   m_Father: {fileID: 0}
   m_RootOrder: 40
+<<<<<<< HEAD
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &334479188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 334479190}
+  - component: {fileID: 334479189}
+  - component: {fileID: 334479191}
+  - component: {fileID: 334479192}
+  m_Layer: 0
+  m_Name: clogBlock
+  m_TagString: clog
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &334479189
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 334479188}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 3d957ca546d24954b90b4d9bcac7df79, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!4 &334479190
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 334479188}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 106.38605, y: 0.8, z: 0}
+  m_LocalScale: {x: 1.8250002, y: 1.7874985, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 48
+=======
+>>>>>>> 33c43b4eb29d33a3c8a1e43d145472463bdd999b
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &334479191
 PolygonCollider2D:
@@ -2130,7 +2234,11 @@ Transform:
   m_LocalScale: {x: 10.273736, y: 18.740728, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
+  m_RootOrder: 20
+=======
   m_RootOrder: 21
+>>>>>>> 33c43b4eb29d33a3c8a1e43d145472463bdd999b
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &518956907
 GameObject:
