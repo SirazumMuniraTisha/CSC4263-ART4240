@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour {
 	public Sprite ShieldCapiRight, ShieldCapiLeft, CapsuleLeft, DeadCapsule;
 	public float speed = 10.0f;
     public Boundary boundary;
-	public int health = 100, count = 0;
+	public int health = 5, count = 0;
     private Player player;
 	public AudioSource Ouch, Dead, BackMusic;
     void Start() {
@@ -76,8 +76,20 @@ public class Movement : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.gameObject.tag == "Enemy") {
+            count += 1;
 			print ("ouch");
-			health -= 5;
+            if (count == 6 && player.curhealth > 0)
+            {
+                health -= 1;
+                player.curhealth -= 1;
+                if (player.curhealth < 0)
+                    player.curhealth = 0;
+                count = 0;
+            }
+
+            else if(count>=1 && player.curhealth<=0)
+               health -= 1;
+
 			if(health > 0)
 				Ouch.Play ();
 			else
@@ -90,7 +102,7 @@ public class Movement : MonoBehaviour {
         else if (other.gameObject.tag == "BBossBull")
         {
             print("ouch");
-            health -= 15;
+            health -= 1;
             if (health > 0)
                 Ouch.Play();
             else
@@ -101,7 +113,7 @@ public class Movement : MonoBehaviour {
         else if (other.gameObject.tag == "eb")
         {
             print("ouch");
-            health -= 10;
+            health -= 1;
             if (health > 0)
                 Ouch.Play();
             else
@@ -118,9 +130,9 @@ public class Movement : MonoBehaviour {
 	 */
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.gameObject.tag == "Useful" && health < 105) {
+		if (other.gameObject.tag == "Useful" && health < 5) {
             Debug.Log(health);
-            health += 5;
+            health = 5;
             //count += 1;
 			Destroy (other.gameObject);
             Debug.Log(health);

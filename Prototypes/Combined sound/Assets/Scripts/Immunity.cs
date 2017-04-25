@@ -11,14 +11,14 @@ public class Immunity : MonoBehaviour {
 
     public Image HeartUI;
 
-    private Player player;
+    private Movement player;
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>();
     }
 
     void Update()
     {
-        HeartUI.sprite = HeartSprites[player.curhealth];
+        HeartUI.sprite = HeartSprites[player.health];
     }
 }
