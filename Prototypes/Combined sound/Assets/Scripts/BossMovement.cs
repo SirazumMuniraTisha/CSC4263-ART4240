@@ -7,7 +7,6 @@ public class BossMovement : MonoBehaviour {
     Rigidbody2D rigidBody;
     Vector2 currentPosition;
     Vector2 initialPosition;
-    int speed = 3;
 
     void Start()
     {
@@ -22,12 +21,5 @@ public class BossMovement : MonoBehaviour {
         currentPosition.x = initialPosition.x + Mathf.Sin(2*Time.timeSinceLevelLoad);
         currentPosition.y = initialPosition.y + Mathf.Sin( Time.timeSinceLevelLoad);
         rigidBody.MovePosition(currentPosition);
-    }
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "bullet")
-        {
-            Destroy(gameObject);
-        }
     }
 }

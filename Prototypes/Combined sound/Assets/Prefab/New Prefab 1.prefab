@@ -22,8 +22,6 @@ GameObject:
   - component: {fileID: 212711845412569770}
   - component: {fileID: 114245872233419336}
   - component: {fileID: 50017009780985336}
-  - component: {fileID: 114300061325619144}
-  - component: {fileID: 68346342803931122}
   m_Layer: 0
   m_Name: New Prefab 1
   m_TagString: Boss
@@ -31,62 +29,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1501792092180044
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4363205151557054}
-  m_Layer: 0
-  m_Name: fa
-  m_TagString: Untagged
-  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1563355206696444
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4047116875094512}
-  m_Layer: 0
-  m_Name: fb
-  m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4047116875094512
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1563355206696444}
-  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
-  m_LocalPosition: {x: -3.15, y: 1.4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4513284216220508}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 180, y: 180, z: 0}
---- !u!4 &4363205151557054
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1501792092180044}
-  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
-  m_LocalPosition: {x: -2.91, y: -1.6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4513284216220508}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 180, y: 180, z: 0}
 --- !u!4 &4513284216220508
 Transform:
   m_ObjectHideFlags: 1
@@ -94,11 +36,9 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1016866128912114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 145.3, y: -2.1, z: 0}
-  m_LocalScale: {x: 3.659813, y: 1.0960042, z: 1}
-  m_Children:
-  - {fileID: 4363205151557054}
-  - {fileID: 4047116875094512}
+  m_LocalPosition: {x: 138.8, y: -3.6, z: 0}
+  m_LocalScale: {x: 2.3921099, y: 1.0960042, z: 1}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -109,7 +49,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1016866128912114}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -122,21 +62,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!68 &68346342803931122
-EdgeCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1016866128912114}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-  - {x: -5.1200004, y: 0}
-  - {x: 5.1200004, y: 0}
 --- !u!114 &114245872233419336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,21 +73,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3fa45243f4eca5439412801489776eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114300061325619144
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1016866128912114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f43eefb93c116f4c86bbc6d9416fe0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 1336815130626734, guid: 761e4fb1a66cdcc4cbc362ad0f040992, type: 2}
-  firePoint:
-  - {fileID: 4363205151557054}
-  - {fileID: 4047116875094512}
 --- !u!212 &212711845412569770
 SpriteRenderer:
   m_ObjectHideFlags: 1

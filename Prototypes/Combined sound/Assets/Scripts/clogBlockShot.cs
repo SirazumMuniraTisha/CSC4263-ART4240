@@ -16,11 +16,10 @@ public class clogBlockShot : MonoBehaviour {
         if (other.gameObject.CompareTag("boundary"))
         {
             rigidbody2d.gameObject.SetActive(false);
-        }
-        /*else if ()
+        } else if ()
         {
 
-        }*/
+        }
 
     }
 }
