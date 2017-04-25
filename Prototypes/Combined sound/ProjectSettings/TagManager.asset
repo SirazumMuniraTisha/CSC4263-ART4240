@@ -21,6 +21,7 @@ TagManager:
   - Boss
   - BBossBull
   - eb
+  - clog
   layers:
   - Default
   - TransparentFX
