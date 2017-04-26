@@ -4,13 +4,35 @@ using UnityEngine;
 
 public class BossFightBullet : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public GameObject enemyBullet;
+
+
+
+    // Use this for initialization
+    public float speed = 7;
+    //public GameObject enemyDeath;
+    float initPosition;
+    float initRotation;
+
+    void Start()
+    {
+        initPosition = transform.position.x;
+        initRotation = transform.rotation.z;
+
+    }
+    void Update()
+    {
+        Vector3 move = Vector2.right * Time.deltaTime * speed;
+        //gameObject.GetComponent<Rigidbody2D>().velocity = transform.forward * speed;
+        if (initRotation == 180)
+        {
+            move = (-1) * move;
+        }
+        transform.Translate(move);
+        if (initPosition - transform.position.x > 20 || initPosition - transform.position.x < -20)
+        {
+            Destroy(gameObject);
+        }
+
+    }
 }
