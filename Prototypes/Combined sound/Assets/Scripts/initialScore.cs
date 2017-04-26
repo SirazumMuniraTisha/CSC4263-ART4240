@@ -9,16 +9,16 @@ public class initialScore : MonoBehaviour
 	GameObject player;
     private int immunityPercentage;
     public Text currentScoreText;
-    public Text currentImmunityText;
+    //public Text currentImmunityText;
     void Start()
     {
 		
         currentScoreText = GameObject.FindGameObjectWithTag("scoreCount").GetComponent<Text>(); 
-        currentImmunityText = GameObject.FindGameObjectWithTag("immunity").GetComponent<Text>(); 
+        //currentImmunityText = GameObject.FindGameObjectWithTag("immunity").GetComponent<Text>(); 
         count = 0;
         immunityPercentage = 100;
 		currentScoreText.text = count.ToString();
-        currentImmunityText.text = "Immunity Level: " + immunityPercentage.ToString() + "%";
+       // currentImmunityText.text = "Immunity Level: " + immunityPercentage.ToString() + "%";
 
     }
 	void Update(){
