@@ -1,0 +1,7 @@
+Bacteria B is really simple. 
+
+Bacteria B always faces either left or right, but can still move up and down similar to Capi. It is a shooting bacteria, and it will
+either follow a set path and shoot at a certain interval or it will attempt to line up a shot at Capi depending on whichever's easier.
+
+When moving up or down, the capsule shifts to the relevant movement frame.
+When shooting, its shooting animation that matches its current movement frame plays for a second while the blast is fired.
