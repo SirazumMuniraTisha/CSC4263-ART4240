@@ -1358,7 +1358,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScoreText: {fileID: 0}
-  currentImmunityText: {fileID: 0}
 --- !u!1 &333135854
 GameObject:
   m_ObjectHideFlags: 0
@@ -2076,7 +2075,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScoreText: {fileID: 0}
-  currentImmunityText: {fileID: 0}
 --- !u!114 &641890287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6431,6 +6429,12 @@ Prefab:
       propertyPath: m_Name
       value: BA3 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 212416173691336706, guid: 43b2209c21654c44b91785dc5bb4964f,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 00f58225369d7374391e1d7e2fada212,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b2209c21654c44b91785dc5bb4964f, type: 2}
   m_IsPrefabParent: 0
