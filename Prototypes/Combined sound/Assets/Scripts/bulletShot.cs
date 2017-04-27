@@ -44,7 +44,11 @@ public class bulletShot: MonoBehaviour {
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
-        }
+		} else if (other.gameObject.tag == "Useful")
+		{
+			Destroy(other.gameObject);
+			Destroy(gameObject);
+		}
 	}
 
 }
