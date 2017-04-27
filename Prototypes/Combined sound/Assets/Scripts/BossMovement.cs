@@ -16,6 +16,7 @@ public class BossMovement : MonoBehaviour {
     public AudioSource Win;
 	public Sprite BossDead;
 	Text currentScoreText;
+	public string scenechange;
     void Start()
     {
 		currentScoreText = GameObject.FindGameObjectWithTag("scoreCount").GetComponent<Text>(); 
@@ -62,7 +63,7 @@ public class BossMovement : MonoBehaviour {
     }
     void KillBoss()
     {
-        Application.LoadLevel("Scene2");
+		Application.LoadLevel(scenechange);
     }
 }
 

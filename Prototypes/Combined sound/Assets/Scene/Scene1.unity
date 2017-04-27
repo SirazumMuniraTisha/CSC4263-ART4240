@@ -394,6 +394,11 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 0a7d3372c3d056942a93c9cc4f8d869e,
         type: 3}
+    - target: {fileID: 114245872233419336, guid: d77848c889fad6b42901193a91a15dd3,
+        type: 2}
+      propertyPath: scenechange
+      value: Scene2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d77848c889fad6b42901193a91a15dd3, type: 2}
   m_IsPrefabParent: 0
@@ -991,7 +996,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 211143828}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
