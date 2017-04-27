@@ -7563,7 +7563,7 @@ MonoBehaviour:
   speed: 10
   boundary:
     xMin: -5
-    xMax: 300
+    xMax: 235
     yMin: -6
     yMax: 15
   health: 5
