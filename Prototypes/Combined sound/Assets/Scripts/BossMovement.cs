@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossMovement : MonoBehaviour {
     SpriteRenderer Boss;
@@ -13,8 +14,12 @@ public class BossMovement : MonoBehaviour {
     float scale = 8.0f;
     float time =0;
     public AudioSource Win;
+	public Sprite BossDead;
+	Text currentScoreText;
     void Start()
     {
+		currentScoreText = GameObject.FindGameObjectWithTag("scoreCount").GetComponent<Text>(); 
+		currentScoreText.text = count.ToString();
         Boss = (SpriteRenderer)GetComponent("SpriteRenderer");
         StillBoss= Boss.sprite;
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
@@ -24,20 +29,19 @@ public class BossMovement : MonoBehaviour {
 
     void Update()
     {
-        currentPosition = initialPosition;
-        currentPosition.x = initialPosition.x + Mathf.Sin(Time.timeSinceLevelLoad);
-        if (currentPosition.x < initialPosition.x)
-        {
-            Boss.sprite = MovingBoss;
-            gameObject.transform.localScale = new Vector2(scale*1.5f, scale);
-        }
-        else
-        {
-            Boss.sprite = StillBoss;
-            gameObject.transform.localScale = new Vector2(1.5f, 1.0f);
-        }
-            currentPosition.y = initialPosition.y + Mathf.Sin( Time.timeSinceLevelLoad);
-        rigidBody.MovePosition(currentPosition);
+		if (count < 10) {
+			currentPosition = initialPosition;
+			currentPosition.x = initialPosition.x + Mathf.Sin (Time.timeSinceLevelLoad);
+			if (currentPosition.x < initialPosition.x) {
+				Boss.sprite = MovingBoss;
+				gameObject.transform.localScale = new Vector2 (scale * 1.5f, scale);
+			} else {
+				Boss.sprite = StillBoss;
+				gameObject.transform.localScale = new Vector2 (1.5f, 1.0f);
+			}
+			currentPosition.y = initialPosition.y + Mathf.Sin (Time.timeSinceLevelLoad);
+			rigidBody.MovePosition (currentPosition);
+		}
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -47,15 +51,18 @@ public class BossMovement : MonoBehaviour {
             count += 1;
             if (count == 10)
             {
-                gameObject.SetActive(false);
+                
+				Boss.sprite = BossDead;
+				//gameObject.SetActive(false);
+				PlayerPrefs.SetString ("s", currentScoreText.text);
                 Win.Play();
-                Invoke("KillBoss", 1);   
+                Invoke("KillBoss", 2);   
             }
         }
     }
     void KillBoss()
     {
-        Application.LoadLevel("GameOver");
+        Application.LoadLevel("Scene2");
     }
 }
 

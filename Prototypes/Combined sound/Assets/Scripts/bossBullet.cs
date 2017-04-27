@@ -28,7 +28,7 @@ public class bossBullet : MonoBehaviour {
             move = (-1) * move;
         }
         transform.Translate(move);
-        if (initPosition - transform.position.x > 20 || initPosition - transform.position.x < -20)
+        if (initPosition - transform.position.x >30 || initPosition - transform.position.x < -30)
         {
             Destroy(gameObject);
         }

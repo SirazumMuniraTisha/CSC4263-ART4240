@@ -8,11 +8,10 @@ public class initialScore : MonoBehaviour
     private int count;
 	GameObject player;
     private int immunityPercentage;
-    public Text currentScoreText;
+    Text currentScoreText;
     //public Text currentImmunityText;
     void Start()
     {
-		
         currentScoreText = GameObject.FindGameObjectWithTag("scoreCount").GetComponent<Text>(); 
         //currentImmunityText = GameObject.FindGameObjectWithTag("immunity").GetComponent<Text>(); 
         count = 0;
@@ -26,7 +25,6 @@ public class initialScore : MonoBehaviour
 		player = GameObject.FindGameObjectWithTag ("Player");
 		if (player==null)
 			Application.LoadLevel ("GameOver");
-
 	}
     
 }

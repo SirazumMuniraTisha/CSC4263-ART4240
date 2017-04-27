@@ -20,13 +20,13 @@ public class EnemyMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
        
-
-        range = Vector2.Distance(transform.position, target.transform.position);
-        if (range <= 10f)
-        {
-            Vector2 velocity = new Vector2((transform.position.x - target.transform.position.x) * speed, (transform.position.y - target.transform.position.y) * speed);
-            GetComponent<Rigidbody2D>().velocity = -velocity;
-        }
+		if (GameObject.FindGameObjectWithTag ("Player") != null) {
+			range = Vector2.Distance (transform.position, target.transform.position);
+			if (range <= 10f) {
+				Vector2 velocity = new Vector2 ((transform.position.x - target.transform.position.x) * speed, (transform.position.y - target.transform.position.y) * speed);
+				GetComponent<Rigidbody2D> ().velocity = -velocity;
+			}
+		}
     }
 
 

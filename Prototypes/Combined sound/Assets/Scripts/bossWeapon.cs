@@ -10,7 +10,7 @@ public class bossWeapon : MonoBehaviour
   
     float dt1;
     private float fireRate = 5f;
-    private float range = 5f;
+    private float range = 20;
     private Transform target;
 
     private float nextFire;
@@ -32,13 +32,14 @@ public class bossWeapon : MonoBehaviour
     }
 
     void ShootBull()
-    {
+	{Debug.Log("working1");
         if (target != null)
-        {
+		{Debug.Log("working2");
             float distance = Vector2.Distance(transform.position, target.position);
             
                 if (Time.time > nextFire)
-                {
+			{Debug.Log("working3");
+				Debug.Log(distance);
                     if (distance <= range)
                     {
                     Debug.Log("working");
