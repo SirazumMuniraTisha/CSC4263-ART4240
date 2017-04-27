@@ -11,6 +11,8 @@ public class BossMovement : MonoBehaviour {
     Vector2 initialPosition;
     int count = 0;
     float scale = 8.0f;
+    float time =0;
+    public AudioSource Win;
     void Start()
     {
         Boss = (SpriteRenderer)GetComponent("SpriteRenderer");
@@ -43,8 +45,17 @@ public class BossMovement : MonoBehaviour {
         if (other.gameObject.tag == "bullet")
         {
             count += 1;
-            if(count ==10)
-            Destroy(gameObject);
+            if (count == 10)
+            {
+                gameObject.SetActive(false);
+                Win.Play();
+                Invoke("KillBoss", 1);   
+            }
         }
     }
+    void KillBoss()
+    {
+        Application.LoadLevel("GameOver");
+    }
 }
+
