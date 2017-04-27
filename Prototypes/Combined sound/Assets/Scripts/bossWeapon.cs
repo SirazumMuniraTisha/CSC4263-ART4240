@@ -8,7 +8,7 @@ public class bossWeapon : MonoBehaviour
     public Transform firePoint;
     float dt1;
     private float fireRate = 5f;
-    private float range = 20;
+    private float range = 40;
     private Transform target;
     private float nextFire;
 
