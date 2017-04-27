@@ -30,7 +30,7 @@ public class WeaponScript : MonoBehaviour {
             move = (-1) * move;
         }
         transform.Translate(move);
-        if (initPosition - transform.position.x > 5 || initPosition - transform.position.x < -5)
+        if (initPosition - transform.position.x > 8 || initPosition - transform.position.x < -8)
         {
             Destroy(gameObject);
         }

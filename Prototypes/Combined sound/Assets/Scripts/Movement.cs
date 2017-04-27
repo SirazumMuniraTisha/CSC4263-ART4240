@@ -123,6 +123,12 @@ public class Movement : MonoBehaviour {
             //	Destroy (gameObject);
             //}	
         }
+        if (other.gameObject.tag == "bad")
+        {
+            Debug.Log("thisSucks");
+            Debug.Log(health);
+
+        }
     }
 
 	/**
@@ -137,7 +143,9 @@ public class Movement : MonoBehaviour {
 			Destroy (other.gameObject);
             Debug.Log(health);
         }
-	}
+
+
+    }
 
     }
 
