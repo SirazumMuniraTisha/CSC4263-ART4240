@@ -31,12 +31,12 @@ public class bulletShot: MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.gameObject.tag == "Enemy") {
-            Text immunityText = GameObject.FindGameObjectWithTag("immunity").GetComponent<Text>();
-            consultText = GameObject.FindGameObjectWithTag("consult").GetComponent<Text>();
-            int currentImmunity = int.Parse(immunityText.text.ToString().Substring(16, immunityText.text.ToString().IndexOf("%")-16)) - 5;
+            //Text immunityText = GameObject.FindGameObjectWithTag("immunity").GetComponent<Text>();
+            //consultText = GameObject.FindGameObjectWithTag("consult").GetComponent<Text>();
+            //int currentImmunity = int.Parse(immunityText.text.ToString().Substring(16, immunityText.text.ToString().IndexOf("%")-16)) - 5;
             //print(currentImmunity);
-            immunityText.text = "Immunity Level: " + currentImmunity.ToString() + "%";
-            consultText.text = "You get 10 scores but your immunity level decreased 5 points because of shooting.";
+            //immunityText.text = "Immunity Level: " + currentImmunity.ToString() + "%";
+            //consultText.text = "You get 10 scores but your immunity level decreased 5 points because of shooting.";
         
             Destroy(other.gameObject);
 			Destroy (gameObject);

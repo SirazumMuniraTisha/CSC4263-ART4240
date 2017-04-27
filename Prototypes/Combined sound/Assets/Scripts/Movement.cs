@@ -10,6 +10,7 @@ public class Boundary
 
 public class Movement : MonoBehaviour {
 	SpriteRenderer Capsule;
+	Quaternion initRotation;
 	Sprite CapsuleRight;
 	public Sprite ShieldCapiRight, ShieldCapiLeft, CapsuleLeft, DeadCapsule;
 	public float speed = 10.0f;
@@ -18,11 +19,13 @@ public class Movement : MonoBehaviour {
     private Player player;
 	public AudioSource Ouch, Dead, BackMusic;
     void Start() {
+		initRotation = transform.rotation;
 		Capsule = (SpriteRenderer)GetComponent("SpriteRenderer");
 		CapsuleRight = Capsule.sprite;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 	void Update () {
+		gameObject.transform.rotation = initRotation;
 		if (health > 0) {
 			if (Input.GetKey (KeyCode.RightArrow)) {
 				if (player.curhealth == 0)
@@ -61,18 +64,6 @@ public class Movement : MonoBehaviour {
 	void KillCapi(){		
 		Destroy (gameObject);
 	}
-       
-        //if (Input.GetKey (KeyCode.RightArrow)) {
-        //	transform.position += Vector3.right * speed * Time.deltaTime;
-        //	print ((float)(firePoint.position.x - Middle.position.x));
-        //Capsule.sprite = (Sprite) CapsuleRight;
-        //}
-        //if (Input.GetKey (KeyCode.UpArrow)) {
-        //	transform.position += Vector3.up * speed * Time.deltaTime;
-        //}
-        //if (Input.GetKey (KeyCode.DownArrow)) {
-        //	transform.position += Vector3.down * speed * Time.deltaTime;
-        //}
 	void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.gameObject.tag == "Enemy") {
@@ -131,9 +122,6 @@ public class Movement : MonoBehaviour {
         }
     }
 
-	/**
-	 * code to trigger power upgrade
-	 */
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.tag == "Useful" && health < 5) {
@@ -143,9 +131,6 @@ public class Movement : MonoBehaviour {
 			Destroy (other.gameObject);
             Debug.Log(health);
         }
-
-
     }
-
-    }
+}
 

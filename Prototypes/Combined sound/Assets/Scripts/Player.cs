@@ -25,7 +25,7 @@ public class Player : MonoBehaviour {
     {
         if (other.gameObject.tag == "Tcell")
         {
-            curhealth += 1;
+			curhealth += 1;
             if (player.health < 5)
                 player.health = 5;
 			Swallow.Play ();
