@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class bossBullet : MonoBehaviour {
-    public GameObject enemyBullet;
- 
-
 
     // Use this for initialization
     public float speed = 50;
@@ -30,8 +27,10 @@ public class bossBullet : MonoBehaviour {
         transform.Translate(move);
         if (initPosition - transform.position.x >30 || initPosition - transform.position.x < -30)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
 
+
     }
+
 }

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class bossWeapon : MonoBehaviour
 {
-    public GameObject bullet, bacteria;
-    public Transform firePoint, bacpoint;
+    public GameObject bullet;
+    public Transform firePoint, bacpoint, point2;
     float dt1;
-    private float fireRate = 5f;
+    private float fireRate = 2f;
     private float range = 40;
     private Transform target;
     private float nextFire = 0.0f;
@@ -34,7 +34,8 @@ public class bossWeapon : MonoBehaviour
                     {
                         nextFire = Time.time + fireRate;
                         Instantiate(bullet, firePoint.position, firePoint.rotation);
-						Instantiate(bacteria, bacpoint.position, bacpoint.rotation);
+					Instantiate(bullet, bacpoint.position, bacpoint.rotation);
+					Instantiate(bullet, point2.position, point2.rotation);
                     }
 
             }
