@@ -401,7 +401,7 @@ Prefab:
     - target: {fileID: 114245872233419336, guid: d77848c889fad6b42901193a91a15dd3,
         type: 2}
       propertyPath: scenechange
-      value: GameOver
+      value: Win
       objectReference: {fileID: 0}
     - target: {fileID: 212711845412569770, guid: d77848c889fad6b42901193a91a15dd3,
         type: 2}
