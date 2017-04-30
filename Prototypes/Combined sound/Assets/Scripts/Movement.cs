@@ -66,58 +66,57 @@ public class Movement : MonoBehaviour {
 	}
 	void OnCollisionEnter2D(Collision2D other)
 	{
-		if (other.gameObject.tag == "Enemy") {
-            count += 1;
-			print ("ouch");
-            if (count == 6 && player.curhealth > 0)
+        if (Capsule.sprite == CapsuleRight || Capsule.sprite == CapsuleLeft)
+        {
+            if (other.gameObject.tag == "Enemy")
             {
-                health -= 1;
-                player.curhealth -= 1;
-                if (player.curhealth < 0)
-                    player.curhealth = 0;
-                count = 0;
+                count += 1;
+                print("ouch");
+                if (count == 6 && player.curhealth > 0)
+                {
+                    health -= 1;
+                    player.curhealth -= 1;
+                    if (player.curhealth < 0)
+                        player.curhealth = 0;
+                    count = 0;
+                }
+
+                else if (count >= 1 && player.curhealth <= 0)
+                    health -= 1;
+
+                if (health > 0)
+                    Ouch.Play();
+                else
+                    Dead.Play();
+                print(health);
+                //if (health == 0) {
+                //	Destroy (gameObject);
+                //}	
             }
+            else if (other.gameObject.tag == "BBossBull")
+            {
+                print("ouch");
+                health -= 1;
+                if (health > 0)
+                    Ouch.Play();
+                else
+                    Dead.Play();
+                print(health);
 
-            else if(count>=1 && player.curhealth<=0)
-               health -= 1;
-
-			if(health > 0)
-				Ouch.Play ();
-			else
-				Dead.Play ();
-			print (health);
-			//if (health == 0) {
-			//	Destroy (gameObject);
-			//}	
-		}
-        else if (other.gameObject.tag == "BBossBull")
-        {
-            print("ouch");
-            health -= 1;
-            if (health > 0)
-                Ouch.Play();
-            else
-                Dead.Play();
-            print(health);
-
-        }
-        else if (other.gameObject.tag == "eb")
-        {
-            print("ouch");
-            health -= 1;
-            if (health > 0)
-                Ouch.Play();
-            else
-                Dead.Play();
-            print(health);
-            //if (health == 0) {
-            //	Destroy (gameObject);
-            //}	
-        }
-        if (other.gameObject.tag == "bad")
-        {
-            Debug.Log("thisSucks");
-            Debug.Log(health);
+            }
+            else if (other.gameObject.tag == "eb")
+            {
+                print("ouch");
+                health -= 1;
+                if (health > 0)
+                    Ouch.Play();
+                else
+                    Dead.Play();
+                print(health);
+                //if (health == 0) {
+                //	Destroy (gameObject);
+                //}	
+            }
 
         }
     }
