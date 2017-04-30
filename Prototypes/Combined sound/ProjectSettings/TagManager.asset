@@ -23,6 +23,8 @@ TagManager:
   - eb
   - clog
   - bad
+  - T1
+  - T2
   layers:
   - Default
   - TransparentFX

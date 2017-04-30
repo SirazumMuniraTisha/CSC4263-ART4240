@@ -7,10 +7,11 @@ public class Enemy2 : MonoBehaviour {
     public Transform firePoint;
     SpriteRenderer BA3;
     GameObject temp;
-    Sprite init;
+    Sprite BA;
+    public Sprite BLeft, BRight;
     float dt1;
-    public float fireRate = 1f;
-    public float range = 5f;
+    public float fireRate = 10f;
+    public float range = 8f;
     private Transform target;
 
     private float nextFire;
@@ -20,7 +21,7 @@ public class Enemy2 : MonoBehaviour {
         BA3 = (SpriteRenderer)GetComponent("SpriteRenderer");
         if (GameObject.FindGameObjectWithTag("Player") != null)
             target = GameObject.FindGameObjectWithTag("Player").transform;
-        init = BA3.sprite;
+        BA = BA3.sprite;
 
     }
 
@@ -36,18 +37,20 @@ public class Enemy2 : MonoBehaviour {
         if (target != null)
         {
             float distance = Vector2.Distance(transform.position, target.position);
-            if (distance <= range)
+            if (BA3.sprite == BLeft || BA3.sprite == BRight)
+            {
                 if (Time.time > nextFire)
                 {
                     if (distance <= range)
                     {
                         // = DateTime.Now.Second;
                         nextFire = Time.time + fireRate;
-                        Instantiate(bullet, firePoint.position, firePoint.rotation);
+                        Instantiate(bullet, firePoint.position, transform.rotation);
                     }
 
                     //GameObject instance= Instantiate(bullet);
                 }
+            }
         }
     }
 }

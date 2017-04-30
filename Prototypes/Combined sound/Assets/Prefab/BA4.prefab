@@ -138,6 +138,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1130070630181196, guid: a754c215ebbe4104e96804cfb3590641, type: 2}
   firePoint: {fileID: 4541226675492696}
+  BLeft: {fileID: 21300000, guid: b30aebb9a849b994f9cc51da611eaa92, type: 3}
+  BRight: {fileID: 21300000, guid: 48e96900c9c369b4ea0a68cda6badffb, type: 3}
   fireRate: 1
   range: 5
 --- !u!114 &114395220872200914
@@ -151,8 +153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c193a70b101ead4dbd605096620e684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  range: 5
 --- !u!212 &212930606314754796
 SpriteRenderer:
   m_ObjectHideFlags: 1
