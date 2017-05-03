@@ -66,8 +66,7 @@ public class Movement : MonoBehaviour {
 	}
 	void OnCollisionEnter2D(Collision2D other)
 	{
-        if (Capsule.sprite == CapsuleRight || Capsule.sprite == CapsuleLeft)
-        {
+       
             if (other.gameObject.tag == "Enemy")
             {
                 count += 1;
@@ -114,8 +113,8 @@ public class Movement : MonoBehaviour {
 
             }
 
-        }
-    }
+   }
+    
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
