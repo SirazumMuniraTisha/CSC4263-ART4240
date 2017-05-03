@@ -643,14 +643,6 @@ Prefab:
       propertyPath: m_Name
       value: BA3 (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 4416854219472164, guid: 43b2209c21654c44b91785dc5bb4964f, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.49128678
-      objectReference: {fileID: 0}
-    - target: {fileID: 4416854219472164, guid: 43b2209c21654c44b91785dc5bb4964f, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.2614722
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b2209c21654c44b91785dc5bb4964f, type: 2}
   m_IsPrefabParent: 0
@@ -3354,14 +3346,6 @@ Prefab:
     - target: {fileID: 4416854219472164, guid: 43b2209c21654c44b91785dc5bb4964f, type: 2}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4416854219472164, guid: 43b2209c21654c44b91785dc5bb4964f, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.49128678
-      objectReference: {fileID: 0}
-    - target: {fileID: 4416854219472164, guid: 43b2209c21654c44b91785dc5bb4964f, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.2614722
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43b2209c21654c44b91785dc5bb4964f, type: 2}
