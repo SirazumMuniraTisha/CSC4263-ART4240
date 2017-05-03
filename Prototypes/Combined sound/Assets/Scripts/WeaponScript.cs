@@ -10,7 +10,7 @@ public class WeaponScript : MonoBehaviour {
 
 
     // Use this for initialization
-    public float speed = 6;
+    private float speed = 16f;
     //public GameObject enemyDeath;
     float initPosition;
     float initRotation;
@@ -30,11 +30,28 @@ public class WeaponScript : MonoBehaviour {
             move = (-1) * move;
         }
         transform.Translate(move);
-        if (initPosition - transform.position.x > 8 || initPosition - transform.position.x < -8)
+        if (initPosition - transform.position.x > 10 || initPosition - transform.position.x < -10)
         {
             Destroy(gameObject);
         }
 
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+
+        if (other.gameObject.tag == "clog")
+        {
+            Destroy(gameObject);
+        }
+        else if (other.gameObject.tag == "Useful")
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+        else if (other.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
     }
 
 

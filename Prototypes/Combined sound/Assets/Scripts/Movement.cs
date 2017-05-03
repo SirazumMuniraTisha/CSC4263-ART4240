@@ -89,9 +89,7 @@ public class Movement : MonoBehaviour {
                 else
                     Dead.Play();
                 print(health);
-                //if (health == 0) {
-                //	Destroy (gameObject);
-                //}	
+
             }
             else if (other.gameObject.tag == "BBossBull")
             {
@@ -113,9 +111,7 @@ public class Movement : MonoBehaviour {
                 else
                     Dead.Play();
                 print(health);
-                //if (health == 0) {
-                //	Destroy (gameObject);
-                //}	
+
             }
 
         }

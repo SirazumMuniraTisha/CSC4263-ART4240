@@ -5,6 +5,7 @@ using UnityEngine;
 public class bossWeapon : MonoBehaviour
 {
     public GameObject bullet;
+    public GameObject ene;
     public Transform firePoint, bacpoint, point2;
     float dt1;
     private float fireRate = 2f;
@@ -20,7 +21,7 @@ public class bossWeapon : MonoBehaviour
 
     void Update()
     {
-        Invoke("ShootBull", 1f);
+        Invoke("ShootBull", .5f);
     }
 
     void ShootBull()
@@ -33,9 +34,9 @@ public class bossWeapon : MonoBehaviour
 				if (distance <= range)
                     {
                         nextFire = Time.time + fireRate;
-                        Instantiate(bullet, firePoint.position, firePoint.rotation);
-					Instantiate(bullet, bacpoint.position, bacpoint.rotation);
-					Instantiate(bullet, point2.position, point2.rotation);
+                    Instantiate(bullet, firePoint.position, firePoint.rotation);
+					Instantiate(ene, bacpoint.position, bacpoint.rotation);
+					Instantiate(ene, point2.position, point2.rotation);
                     }
 
             }

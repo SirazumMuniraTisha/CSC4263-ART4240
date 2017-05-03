@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212893228674141998}
   - component: {fileID: 70593569318166622}
   - component: {fileID: 50494695864482110}
+  - component: {fileID: 114465415429058560}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: bad
@@ -35,13 +36,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1433712382457740}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -48.452576, y: 2.4038274, z: -9}
-  m_LocalScale: {x: 3.676973, y: 2.8829365, z: 0.4021689}
+  m_LocalRotation: {x: -0, y: -0, z: 0.69713026, w: -0.7169445}
+  m_LocalPosition: {x: -47.94, y: 3.39, z: -9}
+  m_LocalScale: {x: 4.442771, y: 2.8829365, z: 0.4021689}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -88.394005}
 --- !u!50 &50494695864482110
 Rigidbody2D:
   serializedVersion: 4
@@ -73,9 +74,20 @@ CapsuleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.57, y: 0.32}
-  m_Direction: 0
+  m_Offset: {x: -0.00000397067, y: -0.0028511176}
+  m_Size: {x: 0.57, y: 0.31456143}
+  m_Direction: 1
+--- !u!114 &114465415429058560
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1433712382457740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60edd26165b24c14db6ee791eb0bd01a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212893228674141998
 SpriteRenderer:
   m_ObjectHideFlags: 1

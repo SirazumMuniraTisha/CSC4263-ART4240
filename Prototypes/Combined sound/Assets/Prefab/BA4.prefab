@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 61568316717306872}
   - component: {fileID: 114395220872200914}
   - component: {fileID: 114064683580423788}
+  - component: {fileID: 114487773592521808}
   m_Layer: 0
   m_Name: BA4
   m_TagString: Enemy
@@ -43,7 +44,7 @@ GameObject:
   m_Layer: 0
   m_Name: fire
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -54,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1466467438841482}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 113.26031, y: -2.149365, z: 0}
+  m_LocalPosition: {x: -136.29, y: 0.79661655, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4541226675492696}
@@ -67,13 +68,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1491919662919882}
-  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4502432719220130}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 180, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50344352894881846
 Rigidbody2D:
   serializedVersion: 4
@@ -85,7 +86,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 600
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -131,7 +132,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1466467438841482}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c02d89f927fbb74cb89d9dcc1f963b3, type: 3}
   m_Name: 
@@ -153,6 +154,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c193a70b101ead4dbd605096620e684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+--- !u!114 &114487773592521808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1466467438841482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a55c7b8092e7ba4699c0dee96e5d6f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 1130070630181196, guid: a754c215ebbe4104e96804cfb3590641, type: 2}
+  firePoint: {fileID: 4541226675492696}
+  fireRate: 1
+  range: 5
 --- !u!212 &212930606314754796
 SpriteRenderer:
   m_ObjectHideFlags: 1

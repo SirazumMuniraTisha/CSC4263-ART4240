@@ -28,7 +28,7 @@ public class EShot : MonoBehaviour {
     void Update()
     {
 
-        Invoke("ShootBull", 2f);
+        Invoke("ShootBull", 0f);
            
     }
 
@@ -36,12 +36,13 @@ public class EShot : MonoBehaviour {
     {
 		if (target != null) {
 			float distance = Vector2.Distance (transform.position, target.position);
-			if (distance <= range)
 			if (Time.time > nextFire) {
 				if (distance <= range) {
-					// = DateTime.Now.Second;
-					nextFire = Time.time + fireRate;
-					Instantiate (bullet, firePoint.position, Quaternion.identity);
+
+                        // = DateTime.Now.Second;
+                        nextFire = Time.time + fireRate;
+                        Instantiate(bullet, transform.position + 1.0f * transform.forward, transform.rotation);
+
 				}
 
 				//GameObject instance= Instantiate(bullet);

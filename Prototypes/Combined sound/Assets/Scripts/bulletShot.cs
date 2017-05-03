@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class bulletShot: MonoBehaviour {
 
-	public float speed = 20;
+	private float speed = 40f;
 	//public GameObject enemyDeath;
 	float initPosition;
 	float initRotation;
@@ -24,20 +24,12 @@ public class bulletShot: MonoBehaviour {
 		if (initPosition - transform.position.x >35 || initPosition - transform.position.x < -35) {
 			Destroy (gameObject);
 		}
-        //consultText = GameObject.FindGameObjectWithTag("consult").GetComponent<Text>();
-       // consultText.text = "";
+
     }
 
 	void OnCollisionEnter2D(Collision2D other)
 	{
-		if (other.gameObject.tag == "Enemy") {
-            //Text immunityText = GameObject.FindGameObjectWithTag("immunity").GetComponent<Text>();
-            //consultText = GameObject.FindGameObjectWithTag("consult").GetComponent<Text>();
-            //int currentImmunity = int.Parse(immunityText.text.ToString().Substring(16, immunityText.text.ToString().IndexOf("%")-16)) - 5;
-            //print(currentImmunity);
-            //immunityText.text = "Immunity Level: " + currentImmunity.ToString() + "%";
-            //consultText.text = "You get 10 scores but your immunity level decreased 5 points because of shooting.";
-        
+		if (other.gameObject.tag == "Enemy") {        
             Destroy(other.gameObject);
 			Destroy (gameObject);
 		} else if (other.gameObject.tag == "clog")
@@ -50,5 +42,10 @@ public class bulletShot: MonoBehaviour {
 			Destroy(gameObject);
 		}
 	}
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
 
 }

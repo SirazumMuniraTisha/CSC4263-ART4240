@@ -5,21 +5,22 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour {
 	private float speed = 1f;
     private float range;
-    //Rigidbody2D r2d;
+    public Rigidbody2D rb;
     private Transform target;
 
 
 	// Use this for initialization
 
 	void Start () {
-		if(GameObject.FindGameObjectWithTag ("Player")!=null)
+        rb = GetComponent<Rigidbody2D>();
+        if (GameObject.FindGameObjectWithTag ("Player")!=null)
 			target = GameObject.FindGameObjectWithTag ("Player").transform;
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-       
+        rb.freezeRotation =true;
 		if (GameObject.FindGameObjectWithTag ("Player") != null) {
 			range = Vector2.Distance (transform.position, target.transform.position);
 			if (range <= 10f) {

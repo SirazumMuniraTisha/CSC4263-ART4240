@@ -5,7 +5,7 @@ using UnityEngine;
 public class bossBullet : MonoBehaviour {
 
     // Use this for initialization
-    public float speed = 50;
+    public float speed = 30f;
     //public GameObject enemyDeath;
     float initPosition;
     float initRotation;
@@ -25,12 +25,37 @@ public class bossBullet : MonoBehaviour {
             move = (-1) * move;
         }
         transform.Translate(move);
-        if (initPosition - transform.position.x >30 || initPosition - transform.position.x < -30)
+        if (initPosition - transform.position.x >20 || initPosition - transform.position.x < -20)
         {
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
 
 
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+
+            Destroy(gameObject);
+        }
+        else if (other.gameObject.tag == "clog")
+        {
+            Destroy(gameObject);
+        }
+        else if (other.gameObject.tag == "Useful")
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+        else if (other.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
+
+
+
+
