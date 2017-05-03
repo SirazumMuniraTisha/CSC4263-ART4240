@@ -28,6 +28,7 @@ public class bulletScript : MonoBehaviour {
 	{
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
+			Debug.Log ("hi");
 			dt1 = DateTime.Now.Second;
 
 			if (Capsule.sprite == CapsuleLeft) {

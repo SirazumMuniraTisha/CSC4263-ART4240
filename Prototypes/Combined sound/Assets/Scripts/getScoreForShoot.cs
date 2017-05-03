@@ -38,7 +38,13 @@ public class getScoreForShoot : MonoBehaviour
           SetCountText();
 
         }
+		else if (other.gameObject.CompareTag("clog")) //shooting clogs 
+		{
+			other.gameObject.SetActive(false);
+			count = count + 1;
+			SetCountText();
 
+		}
     }
 	void Update(){
 

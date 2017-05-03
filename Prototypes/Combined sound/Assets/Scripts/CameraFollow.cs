@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour {
 
     public GameObject player;
-    public float speed = 10.0f;
+    public float speed = 12.0f;
     int score;
     void Start()
     {

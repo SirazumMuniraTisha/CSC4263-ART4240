@@ -13,7 +13,7 @@ public class Movement : MonoBehaviour {
 	Quaternion initRotation;
 	Sprite CapsuleRight;
 	public Sprite ShieldCapiRight, ShieldCapiLeft, CapsuleLeft, DeadCapsule;
-	public float speed = 10.0f;
+	public float speed = 12.0f;
     public Boundary boundary;
 	public int health = 5, count = 0;
     private Player player;

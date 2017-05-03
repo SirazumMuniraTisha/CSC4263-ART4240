@@ -21,7 +21,7 @@ public class bulletShot: MonoBehaviour {
 			move = (-1) * move;
 		}
 		transform.Translate (move);
-		if (initPosition - transform.position.x >35 || initPosition - transform.position.x < -35) {
+		if (initPosition - transform.position.x >25 || initPosition - transform.position.x < -25) {
 			Destroy (gameObject);
 		}
 
