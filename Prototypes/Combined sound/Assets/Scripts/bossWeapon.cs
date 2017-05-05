@@ -32,12 +32,13 @@ public class bossWeapon : MonoBehaviour
             if (Time.time > nextFire)
 			{
 				if (distance <= range)
-				{
-                    nextFire = Time.time + fireRate;
+                    {
+                        nextFire = Time.time + fireRate;
                     Instantiate(bullet, firePoint.position, firePoint.rotation);
 					Instantiate(ene, bacpoint.position, bacpoint.rotation);
 					Instantiate(ene, point2.position, point2.rotation);
-                }
+                    }
+
             }
         }
     }

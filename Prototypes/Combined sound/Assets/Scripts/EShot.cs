@@ -28,7 +28,7 @@ public class EShot : MonoBehaviour {
     void Update()
     {
 
-        Invoke("ShootBull", 0.5f);
+        Invoke("ShootBull", 0f);
            
     }
 
