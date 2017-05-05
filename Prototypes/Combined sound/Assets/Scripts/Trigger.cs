@@ -26,23 +26,13 @@ public class Trigger : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("working");
-        if (other.gameObject.tag == "T1")
+        if (other.gameObject.tag == "Player")
         {
             Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
             Instantiate(enemy, spawnPoint1.position, spawnPoint1.rotation);
-        }
-        else if (other.gameObject.tag == "T2")
-        {
             Instantiate(enemy, spawnPoint2.position, spawnPoint2.rotation);
             Instantiate(enemy, spawnPoint3.position, spawnPoint3.rotation);
             Instantiate(enemy, spawnPoint4.position, spawnPoint4.rotation);
-            Instantiate(enemy, spawnPoint5.position, spawnPoint5.rotation);
-        }
-        else if (other.gameObject.tag == "T3")
-        {
-            Instantiate(enemy, spawnPoint6.position, spawnPoint6.rotation);
-            Instantiate(enemy, spawnPoint7.position, spawnPoint7.rotation);
-            Instantiate(enemy, spawnPoint8.position, spawnPoint8.rotation);
         }
     }
 }
